@@ -1,0 +1,1086 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+                              build/default/production/src/ConvertToString.o (__subsf3)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o) (__addsf3x)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixsfsi.o)
+                              build/default/production/src/ConvertToString.o (__fixsfsi)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixsfsi.o) (__fixunssfsi)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+                              build/default/production/src/ConvertToString.o (__floatsisf)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_inf)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_nan)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_pscA)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_pscB)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o) (__fp_round)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_split3)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o) (__fp_zero)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+                              build/default/production/src/ConvertToString.o (__mulsf3)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o) (__mulsf3x)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(pow.o)
+                              build/default/production/src/ConvertToString.o (pow)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(pow.o) (exp)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o) (__fp_powser)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(inverse.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o) (inverse)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(ldexp.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o) (ldexp)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(pow.o) (log)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(modf.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o) (modf)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(inverse.o) (__divsf3)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o) (__divsf3x)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(ldexp.o) (__fp_mpack)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+                              build/default/production/src/ConvertToString.o (__divmodhi4)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+                              C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o (exit)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+                              build/default/production/src/GPGGA_Parser.o (__tablejump2__)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+                              build/default/production/src/GPGGA_Parser.o (__do_copy_data)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+                              build/default/production/src/GPGGA_Parser.o (__do_clear_bss)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+                              build/default/production/src/GPGGA_Parser.o (__do_global_ctors)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(atof.o)
+                              build/default/production/src/GPGGA_Parser.o (atof)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalnum.o)
+                              build/default/production/src/GPGGA_Parser.o (isalnum)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cty_isfalse.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalnum.o) (__ctype_isfalse)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalpha.o)
+                              build/default/production/src/GPGGA_Parser.o (isupper)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strcat.o)
+                              build/default/production/src/GPGGA_Parser.o (strcat)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(atof.o) (strtod)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isspace.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o) (isspace)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strncasecmp_P.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o) (strncasecmp_P)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cmpsf2.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o) (__eqsf2)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(fp_cmp.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cmpsf2.o) (__fp_cmp)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(errno.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o) (errno)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o) (__muluhisi3)
+c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+                              c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o) (__umulhisi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+errno               0x2               c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(errno.o)
+
+Discarded input sections
+
+ .data          0x00000000        0x0 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .bss           0x00000000        0x0 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ .text          0x00000000        0x0 build/default/production/src/GPGGA_Parser.o
+ .data          0x00000000        0x0 build/default/production/src/GPGGA_Parser.o
+ .bss           0x00000000        0x0 build/default/production/src/GPGGA_Parser.o
+ .text          0x00000000        0x0 build/default/production/src/PORT_INIT.o
+ .data          0x00000000        0x0 build/default/production/src/PORT_INIT.o
+ .bss           0x00000000        0x0 build/default/production/src/PORT_INIT.o
+ .text._Z9SET_PWKEYb
+                0x00000000       0x14 build/default/production/src/PORT_INIT.o
+ .text          0x00000000        0x0 build/default/production/main.o
+ .data          0x00000000        0x0 build/default/production/main.o
+ .bss           0x00000000        0x0 build/default/production/main.o
+ .bss.receiveData
+                0x00000000        0x1 build/default/production/main.o
+ .text          0x00000000        0x0 build/default/production/src/ConvertToString.o
+ .data          0x00000000        0x0 build/default/production/src/ConvertToString.o
+ .bss           0x00000000        0x0 build/default/production/src/ConvertToString.o
+ .text          0x00000000        0x0 build/default/production/src/ACCEL_BMI160.o
+ .data          0x00000000        0x0 build/default/production/src/ACCEL_BMI160.o
+ .bss           0x00000000        0x0 build/default/production/src/ACCEL_BMI160.o
+ .text._Z8i2c_readiPhhh
+                0x00000000       0x48 build/default/production/src/ACCEL_BMI160.o
+ .text          0x00000000        0x0 build/default/production/src/I2C_DRIVER.o
+ .data          0x00000000        0x0 build/default/production/src/I2C_DRIVER.o
+ .bss           0x00000000        0x0 build/default/production/src/I2C_DRIVER.o
+ .text.I2C_0_GetData
+                0x00000000       0x80 build/default/production/src/I2C_DRIVER.o
+ .text          0x00000000        0x0 build/default/production/src/TIMER_INIT.o
+ .data          0x00000000        0x0 build/default/production/src/TIMER_INIT.o
+ .bss           0x00000000        0x0 build/default/production/src/TIMER_INIT.o
+ .text          0x00000000        0x0 build/default/production/src/UART_INIT.o
+ .data          0x00000000        0x0 build/default/production/src/UART_INIT.o
+ .bss           0x00000000        0x0 build/default/production/src/UART_INIT.o
+ .text._Z8Uart_Getv
+                0x00000000       0x10 build/default/production/src/UART_INIT.o
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixsfsi.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixsfsi.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixsfsi.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(pow.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(pow.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(pow.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(inverse.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(inverse.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(inverse.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(ldexp.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(ldexp.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(ldexp.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(modf.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(modf.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(modf.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .text.libgcc   0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(atof.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(atof.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(atof.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalnum.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalnum.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalnum.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cty_isfalse.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cty_isfalse.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cty_isfalse.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalpha.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalpha.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalpha.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strcat.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strcat.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strcat.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isspace.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isspace.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isspace.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strncasecmp_P.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strncasecmp_P.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strncasecmp_P.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cmpsf2.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cmpsf2.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cmpsf2.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(fp_cmp.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(fp_cmp.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(fp_cmp.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(errno.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(errno.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(errno.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+ .text          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .data          0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .bss           0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00804000         0x00004000         rw !x
+eeprom           0x00810000         0x00000200         rw !x
+fuse             0x00820000         0x00000010         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+user_signatures  0x00850000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x804000
+                0x00008000                __RODATA_PM_OFFSET__ = 0x8000
+LOAD C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+LOAD build/default/production/src/GPGGA_Parser.o
+LOAD build/default/production/src/PORT_INIT.o
+LOAD build/default/production/main.o
+LOAD build/default/production/src/ConvertToString.o
+LOAD build/default/production/src/ACCEL_BMI160.o
+LOAD build/default/production/src/I2C_DRIVER.o
+LOAD build/default/production/src/TIMER_INIT.o
+LOAD build/default/production/src/UART_INIT.o
+                0x00000001                __MPLAB_BUILD = 0x1
+START GROUP
+LOAD c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a
+END GROUP
+LOAD c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a
+LOAD c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a
+START GROUP
+LOAD c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a
+LOAD c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a
+LOAD c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a
+LOAD C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4\libavr128da48.a
+END GROUP
+                [0x00000000]                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x00804000]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x802000
+                [0x00020000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
+                [0x00004000]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x00000200]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x00000010]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1d7a
+ *(.vectors)
+ .vectors       0x00000000       0xe8 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+                0x00000000                __vector_default
+                0x00000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table._Z5parsePc
+                0x000000e8        0xe build/default/production/src/GPGGA_Parser.o
+ .progmem.gcc_fplib
+                0x000000f6       0x28 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o)
+ .progmem.gcc_fplib
+                0x0000011e       0x5a c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+                0x00000178                . = ALIGN (0x2)
+                0x00000178                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000178        0x0 linker stubs
+ *(.trampolines*)
+                0x00000178                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ .progmem.data  0x00000178       0x3b c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o)
+ *(.progmem*)
+                0x000001b4                . = ALIGN (0x2)
+ *fill*         0x000001b3        0x1 
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000001b4                __ctors_start = .
+ *(.ctors)
+ .ctors         0x000001b4        0x2 build/default/production/src/GPGGA_Parser.o
+                0x000001b6                __ctors_end = .
+                0x000001b6                __dtors_start = .
+ *(.dtors)
+                0x000001b6                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000001b6        0x0 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+                0x000001b6                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000001b6        0xc C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000001c2       0x1a c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_copy_data.o)
+                0x000001c2                __do_copy_data
+ .init4         0x000001dc       0x10 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_clear_bss.o)
+                0x000001dc                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ .init6         0x000001ec       0x16 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_ctors.o)
+                0x000001ec                __do_global_ctors
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000202        0x8 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+ *(.init9)
+ *(.text)
+ .text          0x0000020a        0x4 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+                0x0000020a                __vector_38
+                0x0000020a                __vector_28
+                0x0000020a                __vector_1
+                0x0000020a                __vector_32
+                0x0000020a                __vector_34
+                0x0000020a                __vector_24
+                0x0000020a                __vector_12
+                0x0000020a                __vector_55
+                0x0000020a                __vector_46
+                0x0000020a                __bad_interrupt
+                0x0000020a                __vector_6
+                0x0000020a                __vector_35
+                0x0000020a                __vector_39
+                0x0000020a                __vector_3
+                0x0000020a                __vector_23
+                0x0000020a                __vector_30
+                0x0000020a                __vector_45
+                0x0000020a                __vector_25
+                0x0000020a                __vector_11
+                0x0000020a                __vector_54
+                0x0000020a                __vector_13
+                0x0000020a                __vector_17
+                0x0000020a                __vector_19
+                0x0000020a                __vector_56
+                0x0000020a                __vector_49
+                0x0000020a                __vector_41
+                0x0000020a                __vector_43
+                0x0000020a                __vector_27
+                0x0000020a                __vector_5
+                0x0000020a                __vector_33
+                0x0000020a                __vector_47
+                0x0000020a                __vector_52
+                0x0000020a                __vector_37
+                0x0000020a                __vector_4
+                0x0000020a                __vector_44
+                0x0000020a                __vector_51
+                0x0000020a                __vector_9
+                0x0000020a                __vector_2
+                0x0000020a                __vector_21
+                0x0000020a                __vector_15
+                0x0000020a                __vector_36
+                0x0000020a                __vector_29
+                0x0000020a                __vector_40
+                0x0000020a                __vector_8
+                0x0000020a                __vector_26
+                0x0000020a                __vector_48
+                0x0000020a                __vector_14
+                0x0000020a                __vector_57
+                0x0000020a                __vector_53
+                0x0000020a                __vector_10
+                0x0000020a                __vector_50
+                0x0000020a                __vector_16
+                0x0000020a                __vector_18
+                0x0000020a                __vector_20
+                0x0000020a                __vector_42
+                0x0000020e                . = ALIGN (0x2)
+ *(.text.*)
+ .text._Z12errorHandlerv
+                0x0000020e        0x8 build/default/production/src/GPGGA_Parser.o
+                0x0000020e                _Z12errorHandlerv
+ .text._Z12GPGGAHandlerv
+                0x00000216      0x2e4 build/default/production/src/GPGGA_Parser.o
+                0x00000216                _Z12GPGGAHandlerv
+ .text._Z5parsePc
+                0x000004fa      0x5ec build/default/production/src/GPGGA_Parser.o
+                0x000004fa                _Z5parsePc
+ .text._GLOBAL__sub_I_GPGGA
+                0x00000ae6       0x36 build/default/production/src/GPGGA_Parser.o
+ .text._Z7SET_DTRb
+                0x00000b1c       0x14 build/default/production/src/PORT_INIT.o
+                0x00000b1c                _Z7SET_DTRb
+ .text._Z9PORT_INITv
+                0x00000b30       0x16 build/default/production/src/PORT_INIT.o
+                0x00000b30                _Z9PORT_INITv
+ .text.__vector_31
+                0x00000b46       0x84 build/default/production/main.o
+                0x00000b46                __vector_31
+ .text.__vector_22
+                0x00000bca       0x38 build/default/production/main.o
+                0x00000bca                __vector_22
+ .text.__vector_7
+                0x00000c02       0x3c build/default/production/main.o
+                0x00000c02                __vector_7
+ .text._Z19send_sms_message_ATPc
+                0x00000c3e       0x3e build/default/production/main.o
+                0x00000c3e                _Z19send_sms_message_ATPc
+ .text._Z11SYSTEM_INITv
+                0x00000c7c       0x12 build/default/production/main.o
+                0x00000c7c                _Z11SYSTEM_INITv
+ .text._Z15Sleep_Mode_Initv
+                0x00000c8e       0x36 build/default/production/main.o
+                0x00000c8e                _Z15Sleep_Mode_Initv
+ .text._Z20GPS_Coordonates_Sendv
+                0x00000cc4       0x96 build/default/production/main.o
+                0x00000cc4                _Z20GPS_Coordonates_Sendv
+ .text.main     0x00000d5a       0x6e build/default/production/main.o
+                0x00000d5a                main
+ .text._Z7reversePci
+                0x00000dc8       0x2e build/default/production/src/ConvertToString.o
+                0x00000dc8                _Z7reversePci
+ .text._Z8intToStriPci
+                0x00000df6       0x86 build/default/production/src/ConvertToString.o
+                0x00000df6                _Z8intToStriPci
+ .text._Z10floatToStrfPci
+                0x00000e7c       0xd2 build/default/production/src/ConvertToString.o
+                0x00000e7c                _Z10floatToStrfPci
+ .text._Z9i2c_writeiPhh
+                0x00000f4e        0xc build/default/production/src/ACCEL_BMI160.o
+                0x00000f4e                _Z9i2c_writeiPhh
+ .text._Z12BMI_160_INITv
+                0x00000f5a      0x124 build/default/production/src/ACCEL_BMI160.o
+                0x00000f5a                _Z12BMI_160_INITv
+ .text.i2c_0_WaitW
+                0x0000107e       0x24 build/default/production/src/I2C_DRIVER.o
+ .text.I2C_0_Init
+                0x000010a2       0x1a build/default/production/src/I2C_DRIVER.o
+                0x000010a2                I2C_0_Init
+ .text.I2C_0_SendData
+                0x000010bc       0x88 build/default/production/src/I2C_DRIVER.o
+                0x000010bc                I2C_0_SendData
+ .text.i2c_MasterResetBus
+                0x00001144       0x18 build/default/production/src/I2C_DRIVER.o
+                0x00001144                i2c_MasterResetBus
+ .text.I2C_0_EndSession
+                0x0000115c       0x18 build/default/production/src/I2C_DRIVER.o
+                0x0000115c                I2C_0_EndSession
+ .text._Z11Delay_Timerj
+                0x00001174       0x30 build/default/production/src/TIMER_INIT.o
+                0x00001174                _Z11Delay_Timerj
+ .text._Z10TIMER_INITv
+                0x000011a4       0x26 build/default/production/src/TIMER_INIT.o
+                0x000011a4                _Z10TIMER_INITv
+ .text._Z9Uart_Sendh
+                0x000011ca       0x10 build/default/production/src/UART_INIT.o
+                0x000011ca                _Z9Uart_Sendh
+ .text._Z10Uart_PrintPKc
+                0x000011da       0x20 build/default/production/src/UART_INIT.o
+                0x000011da                _Z10Uart_PrintPKc
+ .text._Z11USART1_INITv
+                0x000011fa       0x22 build/default/production/src/UART_INIT.o
+                0x000011fa                _Z11USART1_INITv
+ .text.avr-libc.fplib
+                0x0000121c        0xe c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3.o)
+                0x0000121c                __subsf3
+                0x0000121e                __addsf3
+ .text.avr-libc.fplib
+                0x0000122a       0xcc c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(addsf3x.o)
+                0x0000124c                __addsf3x
+ .text.avr-libc.fplib
+                0x000012f6        0xe c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixsfsi.o)
+                0x000012f6                __fixsfsi
+ .text.avr-libc.fplib
+                0x00001304       0x5e c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fixunssfsi.o)
+                0x00001304                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00001362       0x7a c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(floatsisf.o)
+                0x00001362                __floatunsisf
+                0x00001366                __floatsisf
+ .text.avr-libc.fplib
+                0x000013dc        0xc c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_inf.o)
+                0x000013dc                __fp_inf
+ .text.avr-libc.fplib
+                0x000013e8        0x6 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_nan.o)
+                0x000013e8                __fp_nan
+ .text.avr-libc.fplib
+                0x000013ee        0xe c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscA.o)
+                0x000013ee                __fp_pscA
+ .text.avr-libc.fplib
+                0x000013fc        0xe c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_pscB.o)
+                0x000013fc                __fp_pscB
+ .text.avr-libc.fplib
+                0x0000140a       0x22 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_round.o)
+                0x0000140a                __fp_round
+ .text.avr-libc.fplib
+                0x0000142c       0x44 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_split3.o)
+                0x0000142c                __fp_split3
+                0x0000143c                __fp_splitA
+ .text.avr-libc.fplib
+                0x00001470        0xe c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_zero.o)
+                0x00001470                __fp_zero
+                0x00001472                __fp_szero
+ .text.avr-libc.fplib
+                0x0000147e        0x8 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3.o)
+                0x0000147e                __mulsf3
+ .text.avr-libc.fplib
+                0x00001486       0xd2 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(mulsf3x.o)
+                0x000014a4                __mulsf3x
+                0x000014aa                __mulsf3_pse
+ .text.avr-libc.fplib
+                0x00001558       0xa0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(pow.o)
+                0x00001558                pow
+ .text.avr-libc.fplib
+                0x000015f8       0x74 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(exp.o)
+                0x00001608                exp
+ .text.avr-libc.fplib
+                0x0000166c       0x4e c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_powser.o)
+                0x0000166c                __fp_powser
+ .text.avr-libc.fplib
+                0x000016ba       0x10 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(inverse.o)
+                0x000016ba                inverse
+ .text.avr-libc.fplib
+                0x000016ca       0x74 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(ldexp.o)
+                0x000016d2                ldexp
+ .text.avr-libc.fplib
+                0x0000173e       0xa0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(log.o)
+                0x0000174e                log
+ .text.avr-libc.fplib
+                0x000017de       0x68 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(modf.o)
+                0x000017de                modf
+                0x000017de                modff
+ .text.avr-libc.fplib
+                0x00001846        0x8 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3.o)
+                0x00001846                __divsf3
+ .text.avr-libc.fplib
+                0x0000184e       0xdc c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(divsf3x.o)
+                0x0000186e                __divsf3x
+                0x00001874                __divsf3_pse
+ .text.avr-libc.fplib
+                0x0000192a       0x1c c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libm.a(fp_mpack.o)
+                0x0000192a                __fp_mpack
+                0x0000192e                __fp_mpack_finite
+ .text.libgcc.div
+                0x00001946       0x28 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_divmodhi4.o)
+                0x00001946                _div
+                0x00001946                __divmodhi4
+ .text.libgcc   0x0000196e       0x12 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_tablejump2.o)
+                0x0000196e                __tablejump2__
+ .text.libgcc.div
+                0x00001980       0x28 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_udivmodhi4.o)
+                0x00001980                __udivmodhi4
+ .text.avr-libc
+                0x000019a8        0x8 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(atof.o)
+                0x000019a8                atof
+ .text.avr-libc
+                0x000019b0       0x14 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalnum.o)
+                0x000019b0                isalnum
+ .text.avr-libc
+                0x000019c4        0x6 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cty_isfalse.o)
+                0x000019c4                __ctype_isfalse
+                0x000019c8                __ctype_istrue
+ .text.avr-libc
+                0x000019ca       0x16 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isalpha.o)
+                0x000019ca                isupper
+                0x000019d0                isalpha
+                0x000019d2                islower
+ .text.avr-libc
+                0x000019e0       0x16 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strcat.o)
+                0x000019e0                strcat
+ .text.avr-libc
+                0x000019f6      0x2b8 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o)
+                0x000019f6                strtod
+ .text.avr-libc
+                0x00001cae       0x12 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(isspace.o)
+                0x00001cae                isspace
+ .text.avr-libc
+                0x00001cc0       0x30 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strncasecmp_P.o)
+                0x00001cc0                strncasecmp_P
+ .text.avr-libc.fplib
+                0x00001cf0        0xa c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(cmpsf2.o)
+                0x00001cf0                __nesf2
+                0x00001cf0                __eqsf2
+                0x00001cf0                __cmpsf2
+                0x00001cf0                __ltsf2
+                0x00001cf0                __lesf2
+ .text.avr-libc.fplib
+                0x00001cfa       0x48 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(fp_cmp.o)
+                0x00001cfa                __fp_cmp
+ .text.libgcc.mul
+                0x00001d42       0x16 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_muluhisi3.o)
+                0x00001d42                __muluhisi3
+ .text.libgcc.mul
+                0x00001d58       0x1e c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_umulhisi3.o)
+                0x00001d58                __umulhisi3
+                0x00001d76                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001d76        0x0 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+                0x00001d76                _exit
+                0x00001d76                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001d76        0x4 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/avrxmega4\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001d7a                _etext = .
+
+.data           0x00804000       0xe8 load address 0x00001d7a
+                0x00804000                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ .data.Get_GPS_Cnt
+                0x00804000        0x1 build/default/production/main.o
+                0x00804000                Get_GPS_Cnt
+ .data.per_interr
+                0x00804001        0x2 build/default/production/src/TIMER_INIT.o
+                0x00804001                per_interr
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x00804003       0x58 build/default/production/src/GPGGA_Parser.o
+ .rodata.str1.1
+                0x0080405b       0x8c build/default/production/main.o
+                                 0x8e (size before relaxing)
+ *(.gnu.linkonce.r*)
+                0x008040e8                . = ALIGN (0x2)
+ *fill*         0x008040e7        0x1 
+                0x008040e8                _edata = .
+                0x008040e8                PROVIDE (__data_end, .)
+
+.bss            0x008040e8      0x1d1
+                0x008040e8                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.SMS_STRING
+                0x008040e8       0x82 build/default/production/src/GPGGA_Parser.o
+                0x008040e8                SMS_STRING
+ .bss.NMEA_ERROR_FLAG
+                0x0080416a        0x1 build/default/production/src/GPGGA_Parser.o
+                0x0080416a                NMEA_ERROR_FLAG
+ .bss.parser    0x0080416b       0x69 build/default/production/src/GPGGA_Parser.o
+                0x0080416b                parser
+ .bss.GPGGA     0x008041d4        0xe build/default/production/src/GPGGA_Parser.o
+                0x008041d4                GPGGA
+ .bss.Timer_Cnt
+                0x008041e2        0x1 build/default/production/main.o
+                0x008041e2                Timer_Cnt
+ .bss.do_once_flag
+                0x008041e3        0x1 build/default/production/main.o
+                0x008041e3                do_once_flag
+ .bss.Movement_Sensor_Status
+                0x008041e4        0x1 build/default/production/main.o
+                0x008041e4                Movement_Sensor_Status
+ .bss.GPS_Info_Flag
+                0x008041e5        0x1 build/default/production/main.o
+                0x008041e5                GPS_Info_Flag
+ .bss.Delay_Flag
+                0x008041e6        0x1 build/default/production/main.o
+                0x008041e6                Delay_Flag
+ .bss.GPS_Buffer_Index
+                0x008041e7        0x2 build/default/production/main.o
+                0x008041e7                GPS_Buffer_Index
+ .bss.Get_GPS_Cnt_String
+                0x008041e9        0x5 build/default/production/main.o
+                0x008041e9                Get_GPS_Cnt_String
+ .bss.GPS_USART1_Buffer
+                0x008041ee       0xc8 build/default/production/main.o
+                0x008041ee                GPS_USART1_Buffer
+ .bss.USART_Buffer
+                0x008042b6        0x1 build/default/production/main.o
+                0x008042b6                USART_Buffer
+ *(COMMON)
+ COMMON         0x008042b7        0x2 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(errno.o)
+                0x008042b7                errno
+                0x008042b9                PROVIDE (__bss_end, .)
+                0x00001d7a                __data_load_start = LOADADDR (.data)
+                0x00001e62                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008042b9        0x0
+                [!provide]                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                PROVIDE (__noinit_end, .)
+                0x008042b9                _end = .
+                [!provide]                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x5c
+ *(.comment)
+ .comment       0x00000000       0x30 build/default/production/src/GPGGA_Parser.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000030       0x31 build/default/production/src/PORT_INIT.o
+ .comment       0x00000030       0x31 build/default/production/main.o
+ .comment       0x00000030       0x31 build/default/production/src/ConvertToString.o
+ .comment       0x00000030       0x31 build/default/production/src/ACCEL_BMI160.o
+ .comment       0x00000030       0x31 build/default/production/src/I2C_DRIVER.o
+ .comment       0x00000030       0x31 build/default/production/src/TIMER_INIT.o
+ .comment       0x00000030       0x31 build/default/production/src/UART_INIT.o
+ .comment       0x00000030       0x31 c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(strtod.o)
+ .comment       0x00000030       0x2c c:/users/adyco/desktop/nmea_parser/avr8-gnu-toolchain-3.6.2.1778-win32.any.x86/avr8-gnu-toolchain-win32_x86/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4\libc.a(errno.o)
+                                 0x2d (size before relaxing)
+
+.note.gnu.avr.deviceinfo
+                0x00000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x00000000       0x40 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x2c24
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000     0x2c24 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+
+.debug_abbrev   0x00000000     0x29ce
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000     0x29ce C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+
+.debug_line     0x00000000      0x1f3
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x00000000      0x1f3 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x00000000     0x1320
+ *(.debug_str)
+ .debug_str     0x00000000     0x1320 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/AVR-Dx_DFP/1.10.124/gcc/dev/avr128da48/avrxmega4/crtavr128da48.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(dist/default/production/GPS_TRACKERV0.1.X.production.elf elf32-avr)
+LOAD linker stubs
