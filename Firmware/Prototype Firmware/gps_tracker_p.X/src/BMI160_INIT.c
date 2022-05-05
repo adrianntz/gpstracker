@@ -3,7 +3,6 @@
 #include <avr/io.h>
 #include "../mcc_generated_files/i2c_host/twi0.h"
 #include "../headers/i2c.h"
-
 #include <util/delay.h>
 
 #define READ_BYTE 0x01
@@ -19,6 +18,8 @@
 #define BMI160_REG_CMD 0x7E
 #define BMI160_REG_INT_LATCH 0x54
 #define BMI160_REG_ACC_CONF 0x40
+
+
 void i2c_MasterResetBus() {
   TWI0.MCTRLB |= TWI_FLUSH_bm;
   TWI0.MCTRLA = 0 << TWI_ENABLE_bp; //DISABLE
@@ -32,14 +33,17 @@ void I2C_0_EndSession(void) {
 }
 
 
-void i2c_write(int device_address, uint8_t * reg_and_data, uint8_t size) {
-  TWI0_Write((device_address << 1), reg_and_data, size);
+void i2c_write(int device_address, uint8_t * reg_and_data, uint8_t size) 
+{
+  I2C_0_SendData((device_address << 1), reg_and_data, size);
+  //TWI0_Write((device_address << 1), reg_and_data, size);
   I2C_0_EndSession();
 
 }
 
-void i2c_read(int device_address, uint8_t * reciev_data, uint8_t size, uint8_t reg_read) {
-  TWI0_Write(device_address, & reg_read, 1);
+void i2c_read(int device_address, uint8_t * reciev_data, uint8_t size, uint8_t reg_read) 
+{
+  i2c_write(device_address, & reg_read, 1);
   TWI0_Read((device_address << 1) + 1, reciev_data, size);
   I2C_0_EndSession();
 

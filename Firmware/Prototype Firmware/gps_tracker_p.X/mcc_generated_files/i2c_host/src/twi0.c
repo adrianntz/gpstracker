@@ -122,8 +122,8 @@ void TWI0_Initialize(void)
     //Host Baud Rate Control
     TWI0.MBAUD = (uint8_t)TWI0_BAUD(104166, 0.1);
     
-    //ENABLE enabled; QCEN disabled; RIEN disabled; SMEN disabled; TIMEOUT DISABLED; WIEN disabled; 
-    TWI0.MCTRLA = 0x1;
+    //ENABLE enabled; QCEN disabled; RIEN enabled; SMEN disabled; TIMEOUT DISABLED; WIEN disabled; 
+    TWI0.MCTRLA = 0x81;
     
     //ARBLOST disabled; BUSERR disabled; BUSSTATE UNKNOWN; CLKHOLD disabled; RIF disabled; WIF disabled; 
     TWI0.MSTATUS = 0x0;
@@ -155,7 +155,7 @@ void TWI0_Deinitialize(void)
     //Host Baud Rate Control
     TWI0.MBAUD = (uint8_t)TWI0_BAUD(104166, 0.1);
     
-    //ENABLE enabled; QCEN disabled; RIEN disabled; SMEN disabled; TIMEOUT DISABLED; WIEN disabled; 
+    //ENABLE enabled; QCEN disabled; RIEN enabled; SMEN disabled; TIMEOUT DISABLED; WIEN disabled; 
     TWI0.MCTRLA = 0x00;
     
     //ARBLOST disabled; BUSERR disabled; BUSSTATE UNKNOWN; CLKHOLD disabled; RIF disabled; WIF disabled; 

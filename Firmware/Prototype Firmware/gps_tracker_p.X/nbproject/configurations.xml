@@ -90,6 +90,7 @@
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>src/BMI160_INIT.c</itemPath>
+      <itemPath>src/i2c.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

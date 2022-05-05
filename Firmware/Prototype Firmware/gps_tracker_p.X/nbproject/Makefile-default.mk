@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/protected_io.S mcc_generated_files/system/src/interrupt.c mcc_generated_files/timer/src/rtc.c mcc_generated_files/timer/src/delay.c mcc_generated_files/uart/src/usart0.c mcc_generated_files/uart/src/usart1.c main.c src/BMI160_INIT.c mcc_generated_files/i2c_host/src/twi0.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/i2c_host/src/twi0.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/protected_io.S mcc_generated_files/system/src/interrupt.c mcc_generated_files/timer/src/rtc.c mcc_generated_files/timer/src/delay.c mcc_generated_files/uart/src/usart0.c mcc_generated_files/uart/src/usart1.c main.c src/BMI160_INIT.c src/i2c.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/system/src/pins.o ${OBJECTDIR}/mcc_generated_files/system/src/clock.o ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o ${OBJECTDIR}/mcc_generated_files/system/src/system.o ${OBJECTDIR}/mcc_generated_files/system/src/protected_io.o ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o ${OBJECTDIR}/mcc_generated_files/timer/src/rtc.o ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o ${OBJECTDIR}/mcc_generated_files/uart/src/usart0.o ${OBJECTDIR}/mcc_generated_files/uart/src/usart1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/src/BMI160_INIT.o ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/system/src/pins.o.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.o.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o.d ${OBJECTDIR}/mcc_generated_files/system/src/system.o.d ${OBJECTDIR}/mcc_generated_files/system/src/protected_io.o.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o.d ${OBJECTDIR}/mcc_generated_files/timer/src/rtc.o.d ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o.d ${OBJECTDIR}/mcc_generated_files/uart/src/usart0.o.d ${OBJECTDIR}/mcc_generated_files/uart/src/usart1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/src/BMI160_INIT.o.d ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o ${OBJECTDIR}/mcc_generated_files/system/src/pins.o ${OBJECTDIR}/mcc_generated_files/system/src/clock.o ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o ${OBJECTDIR}/mcc_generated_files/system/src/system.o ${OBJECTDIR}/mcc_generated_files/system/src/protected_io.o ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o ${OBJECTDIR}/mcc_generated_files/timer/src/rtc.o ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o ${OBJECTDIR}/mcc_generated_files/uart/src/usart0.o ${OBJECTDIR}/mcc_generated_files/uart/src/usart1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/src/BMI160_INIT.o ${OBJECTDIR}/src/i2c.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.o.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.o.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o.d ${OBJECTDIR}/mcc_generated_files/system/src/system.o.d ${OBJECTDIR}/mcc_generated_files/system/src/protected_io.o.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o.d ${OBJECTDIR}/mcc_generated_files/timer/src/rtc.o.d ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o.d ${OBJECTDIR}/mcc_generated_files/uart/src/usart0.o.d ${OBJECTDIR}/mcc_generated_files/uart/src/usart1.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/src/BMI160_INIT.o.d ${OBJECTDIR}/src/i2c.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/system/src/pins.o ${OBJECTDIR}/mcc_generated_files/system/src/clock.o ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o ${OBJECTDIR}/mcc_generated_files/system/src/system.o ${OBJECTDIR}/mcc_generated_files/system/src/protected_io.o ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o ${OBJECTDIR}/mcc_generated_files/timer/src/rtc.o ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o ${OBJECTDIR}/mcc_generated_files/uart/src/usart0.o ${OBJECTDIR}/mcc_generated_files/uart/src/usart1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/src/BMI160_INIT.o ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o ${OBJECTDIR}/mcc_generated_files/system/src/pins.o ${OBJECTDIR}/mcc_generated_files/system/src/clock.o ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.o ${OBJECTDIR}/mcc_generated_files/system/src/system.o ${OBJECTDIR}/mcc_generated_files/system/src/protected_io.o ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.o ${OBJECTDIR}/mcc_generated_files/timer/src/rtc.o ${OBJECTDIR}/mcc_generated_files/timer/src/delay.o ${OBJECTDIR}/mcc_generated_files/uart/src/usart0.o ${OBJECTDIR}/mcc_generated_files/uart/src/usart1.o ${OBJECTDIR}/main.o ${OBJECTDIR}/src/BMI160_INIT.o ${OBJECTDIR}/src/i2c.o
 
 # Source Files
-SOURCEFILES=mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/protected_io.S mcc_generated_files/system/src/interrupt.c mcc_generated_files/timer/src/rtc.c mcc_generated_files/timer/src/delay.c mcc_generated_files/uart/src/usart0.c mcc_generated_files/uart/src/usart1.c main.c src/BMI160_INIT.c mcc_generated_files/i2c_host/src/twi0.c
+SOURCEFILES=mcc_generated_files/i2c_host/src/twi0.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/protected_io.S mcc_generated_files/system/src/interrupt.c mcc_generated_files/timer/src/rtc.c mcc_generated_files/timer/src/delay.c mcc_generated_files/uart/src/usart0.c mcc_generated_files/uart/src/usart1.c main.c src/BMI160_INIT.c src/i2c.c
 
 
 
@@ -94,6 +94,12 @@ MP_PROCESSOR_OPTION=AVR128DA48
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o: mcc_generated_files/i2c_host/src/twi0.c  .generated_files/flags/default/6921b245be28426abea1f8c6b72b062fd03a0f22 .generated_files/flags/default/afa1e30d70708109790c04a183138f3a998d7b8b
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/i2c_host/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d" -MT "${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d" -MT ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o -o ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o mcc_generated_files/i2c_host/src/twi0.c 
+	
 ${OBJECTDIR}/mcc_generated_files/system/src/pins.o: mcc_generated_files/system/src/pins.c  .generated_files/flags/default/37f719459ea748e570920e46f478eee077563c39 .generated_files/flags/default/afa1e30d70708109790c04a183138f3a998d7b8b
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/system/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/system/src/pins.o.d 
@@ -160,13 +166,19 @@ ${OBJECTDIR}/src/BMI160_INIT.o: src/BMI160_INIT.c  .generated_files/flags/defaul
 	@${RM} ${OBJECTDIR}/src/BMI160_INIT.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/src/BMI160_INIT.o.d" -MT "${OBJECTDIR}/src/BMI160_INIT.o.d" -MT ${OBJECTDIR}/src/BMI160_INIT.o -o ${OBJECTDIR}/src/BMI160_INIT.o src/BMI160_INIT.c 
 	
-${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o: mcc_generated_files/i2c_host/src/twi0.c  .generated_files/flags/default/6921b245be28426abea1f8c6b72b062fd03a0f22 .generated_files/flags/default/afa1e30d70708109790c04a183138f3a998d7b8b
+${OBJECTDIR}/src/i2c.o: src/i2c.c  .generated_files/flags/default/cf3c991366d07bb8bd5ae3a770dba47929c947fb .generated_files/flags/default/afa1e30d70708109790c04a183138f3a998d7b8b
+	@${MKDIR} "${OBJECTDIR}/src" 
+	@${RM} ${OBJECTDIR}/src/i2c.o.d 
+	@${RM} ${OBJECTDIR}/src/i2c.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/src/i2c.o.d" -MT "${OBJECTDIR}/src/i2c.o.d" -MT ${OBJECTDIR}/src/i2c.o -o ${OBJECTDIR}/src/i2c.o src/i2c.c 
+	
+else
+${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o: mcc_generated_files/i2c_host/src/twi0.c  .generated_files/flags/default/72d067012b333fe1f058c4f2f84051032fa65a84 .generated_files/flags/default/afa1e30d70708109790c04a183138f3a998d7b8b
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/i2c_host/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d" -MT "${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d" -MT ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o -o ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o mcc_generated_files/i2c_host/src/twi0.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d" -MT "${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d" -MT ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o -o ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o mcc_generated_files/i2c_host/src/twi0.c 
 	
-else
 ${OBJECTDIR}/mcc_generated_files/system/src/pins.o: mcc_generated_files/system/src/pins.c  .generated_files/flags/default/297a1ca0fd29ca0d771ef825ffe55de9922ddf3 .generated_files/flags/default/afa1e30d70708109790c04a183138f3a998d7b8b
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/system/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/system/src/pins.o.d 
@@ -233,11 +245,11 @@ ${OBJECTDIR}/src/BMI160_INIT.o: src/BMI160_INIT.c  .generated_files/flags/defaul
 	@${RM} ${OBJECTDIR}/src/BMI160_INIT.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/src/BMI160_INIT.o.d" -MT "${OBJECTDIR}/src/BMI160_INIT.o.d" -MT ${OBJECTDIR}/src/BMI160_INIT.o -o ${OBJECTDIR}/src/BMI160_INIT.o src/BMI160_INIT.c 
 	
-${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o: mcc_generated_files/i2c_host/src/twi0.c  .generated_files/flags/default/72d067012b333fe1f058c4f2f84051032fa65a84 .generated_files/flags/default/afa1e30d70708109790c04a183138f3a998d7b8b
-	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/i2c_host/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d" -MT "${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o.d" -MT ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o -o ${OBJECTDIR}/mcc_generated_files/i2c_host/src/twi0.o mcc_generated_files/i2c_host/src/twi0.c 
+${OBJECTDIR}/src/i2c.o: src/i2c.c  .generated_files/flags/default/38b20334fdc7d8cf4face31882e0f024afb929de .generated_files/flags/default/afa1e30d70708109790c04a183138f3a998d7b8b
+	@${MKDIR} "${OBJECTDIR}/src" 
+	@${RM} ${OBJECTDIR}/src/i2c.o.d 
+	@${RM} ${OBJECTDIR}/src/i2c.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/src/i2c.o.d" -MT "${OBJECTDIR}/src/i2c.o.d" -MT ${OBJECTDIR}/src/i2c.o -o ${OBJECTDIR}/src/i2c.o src/i2c.c 
 	
 endif
 

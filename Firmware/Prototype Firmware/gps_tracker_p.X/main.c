@@ -1,4 +1,4 @@
- /*
+/*
  * MAIN Generated Driver File
  * 
  * @file main.c
@@ -30,7 +30,10 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
+#include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
+#include <math.h>
 #include "mcc_generated_files/system/system.h"
 #include "headers/BMI160_INIT.h"
 /*
@@ -67,7 +70,8 @@ char                   USART_DummyBuffer,
                          GPS_USART0_Buffer[200],
                          Get_GPS_Cnt_String[5],
                          *GPRMC_Fields[12],
-                         GPS_Data[OUTPUT_BUFFER_SIZE];
+                         GPS_Validity[OUTPUT_BUFFER_SIZE];
+ const char         Website_URL[]="http://gpstrackerntz.000webhostapp.com/gpsdata.php?";
 
 unsigned volatile int
                          GPS_Buffer_Index = 0;
@@ -76,11 +80,20 @@ volatile bool           Delay_Flag = false,
                         GPS_Info_Flag = false, 
                         Movement_Sensor_Status = false;
 
-bool                    do_once_flag = false;
+bool                        do_once_flag = false;
 volatile uint8_t        Timer_Cnt= 0;
-uint8_t                 receiveData;
-uint8_t                 Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
- 
+uint8_t                    receiveData;
+uint8_t                    Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
+
+ struct DecimalCoordinates
+ {
+    char Lng_DecMin[10];
+    char Lat_DecMin[10];
+    char Lng_Dir_DecMin[2];
+    char Lat_Dir_DecMin[2];
+}DecimalDegrees_and_Minutes;
+
+volatile struct DecimalCoordinates Coordinates;
 void SET_DTR(bool setting) //Function to set DTR pin HIGH or LOW 
 {
   if (setting == 1)
@@ -158,7 +171,10 @@ int parse_comma_delimited_str(char* string, char** fields, int max_fields);
 void send_sms_message_AT(char * msg) ;
 void Sleep_Mode_Init();
 void GPS_Coordonates_Send();
-
+void send_lat_and_long_gprs(char lat_param[],
+                            char lat_dir_param[], 
+                            char lng_param[],
+                            char lng_dir_param[]);
 
 int main(void)
 {
@@ -227,6 +243,40 @@ void send_sms_message_AT(char * msg)
   USART0_Write((char) 26);                          //ASCII code 26 means the CTRL+Z Character which is used to signal the end of the SMS message
 }
 
+void send_lat_and_long_gprs(char lat_param[],
+                            char lat_dir_param[], 
+                            char lng_param[],
+                            char lng_dir_param[])
+{
+    USART0_Print("AT+CGATT=1\r\n");                                                     
+    DELAY_milliseconds(300);
+     USART0_Print("AT+SAPBR=3,1,\"Contype\",\"GPRS\"\r\n");                                                     
+    DELAY_milliseconds(300);
+     USART0_Print("AT+SAPBR=3,1,\"APN\",\"live.vodafone.com\"\r\n");                                                     
+    DELAY_milliseconds(300);
+     USART0_Print("AT+SAPBR=1,1\r\n");                                                     
+    DELAY_milliseconds(300);
+     USART0_Print("AT+SAPBR=2,1\r\n");                                                     
+    DELAY_milliseconds(300);
+     USART0_Print("AT+HTTPINIT\r\n");                                                     
+    DELAY_milliseconds(300);
+     USART0_Print("AT+HTTPPARA=\"CID\",1\r\n");                                  
+    DELAY_milliseconds(300);
+    USART0_Print("AT+HTTPPARA=\"URL\",\"");   
+    USART0_Print(Website_URL);
+    USART0_Print("lat="); USART0_Print(lat_param);
+    USART0_Print("&lat_dir="); USART0_Print(lat_dir_param);
+    USART0_Print("&lng="); USART0_Print(lng_param);
+    USART0_Print("&lng_dir="); USART0_Print(lng_dir_param);
+    USART0_Print("\"\r\n");
+    DELAY_milliseconds(300);
+    USART0_Print("AT+HTTPACTION=1\r\n");
+    DELAY_milliseconds(300);
+    USART0_Print("AT+HTTPTERM\r\n");
+    DELAY_milliseconds(300);
+    USART0_Print("AT+CIPSHUT\r\n");
+    DELAY_milliseconds(300);
+}
 
 void Sleep_Mode_Init()
 {
@@ -240,7 +290,7 @@ void Sleep_Mode_Init()
         DELAY_milliseconds(300);
         SET_DTR(HIGH);
         do_once_flag = true;
-        snprintf(GPS_USART0_Buffer,1,"\0");//clear the gps buffer
+        GPS_USART0_Buffer[0]=0;         //clear buffer
       }
       
 }
@@ -254,7 +304,7 @@ void GPS_Coordonates_Send()
         SET_DTR(LOW);
         
         USART0_Print("AT+CFUN=1\r\n");        //Enables Full GSM Functionality
-        DELAY_milliseconds(300);
+        DELAY_milliseconds(3000);
         USART0_Print("AT+CGPSPWR=1\r\n"); //Turn on GPS power
         DELAY_milliseconds(300);
         USART0_Print("AT+CGPSOUT=32\r\n"); // CGPSOUT=2 enables the SIM808 to send GPS data in GPGGA format once every second
@@ -266,8 +316,16 @@ void GPS_Coordonates_Send()
         //parse_comma_delimited_str(GPS_USART1_Buffer,GPRMC_Fields,NMEA_NO_OF_FIELDS);
        // send_sms_message_AT(SMS_STRING);
         DELAY_milliseconds(100);
-        if(strcmp( NMEA_Parse(GPS_USART0_Buffer,GPS_Data),"Invalid\n")!=0)
-            send_sms_message_AT(   GPS_Data   );
+        
+            
+        if(strcmp( NMEA_Parse(GPS_USART0_Buffer,GPS_Validity),"Invalid\n")!=0)
+        {
+           
+            send_lat_and_long_gprs(DecimalDegrees_and_Minutes.Lat_DecMin,
+                                   DecimalDegrees_and_Minutes.Lat_Dir_DecMin,
+                                   DecimalDegrees_and_Minutes.Lng_DecMin,
+                                   DecimalDegrees_and_Minutes.Lng_Dir_DecMin);
+        }
         /* For Debugging reasons, we print out the GPS counter*/
         printf("\n [CONSOLE] GPS COUNT: %d\n",--Get_GPS_Cnt);
     }
@@ -287,29 +345,26 @@ int parse_comma_delimited_str(char* string, char** fields, int max_fields)
     return --i;
 }
 
+
+
 char * NMEA_Parse(char *NMEA_Sentence,char *output)
 {
-     
+    
     parse_comma_delimited_str(NMEA_Sentence,GPRMC_Fields,NMEA_NO_OF_FIELDS);
       if (strcmp(GPRMC_Fields[GPRMC_FIELD_VALIDITY], "A") == 0)
-    {
-
-        snprintf(output, OUTPUT_BUFFER_SIZE, GPRMC_Fields[GPRMC_FIELD_TIME]);
-        strncat(output, ";", 1);
-        strncat(output, GPRMC_Fields[GPRMC_FIELD_LAT], strlen(GPRMC_Fields[GPRMC_FIELD_LAT]));
-        strncat(output, ";", 1);
-        strncat(output, GPRMC_Fields[GPRMC_FIELD_LAT_DIR], strlen(GPRMC_Fields[GPRMC_FIELD_LAT_DIR]));
-        strncat(output, ";", 1);
-        strncat(output, GPRMC_Fields[GPRMC_FIELD_LONG], strlen(GPRMC_Fields[GPRMC_FIELD_LONG]));
-        strncat(output, ";", 1);
-        strncat(output, GPRMC_Fields[GPRMC_FIELD_LONG_DIR], strlen(GPRMC_Fields[GPRMC_FIELD_LONG_DIR]));
-    }
-
+        {
+            snprintf(output, OUTPUT_BUFFER_SIZE, "Valid\n");
+            snprintf(DecimalDegrees_and_Minutes.Lat_DecMin, 10, GPRMC_Fields[GPRMC_FIELD_LAT]);
+            snprintf(DecimalDegrees_and_Minutes.Lng_DecMin, 10, GPRMC_Fields[GPRMC_FIELD_LONG]);
+            snprintf(DecimalDegrees_and_Minutes.Lat_Dir_DecMin, 2, GPRMC_Fields[GPRMC_FIELD_LAT_DIR]);
+            snprintf(DecimalDegrees_and_Minutes.Lng_Dir_DecMin, 2, GPRMC_Fields[GPRMC_FIELD_LONG_DIR]);
+           
+      }
     else
-    {
-        snprintf(output, OUTPUT_BUFFER_SIZE, "Invalid\n");
-        printf("\n[CONSOLE] INVALID\n");
-    }
+        {
+            snprintf(output, OUTPUT_BUFFER_SIZE, "Invalid\n");
+            printf("\n[CONSOLE] INVALID\n");
+        }
 
     return output;
 }

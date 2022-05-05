@@ -1,13 +1,17 @@
 build/default/production/main.o.d build/default/production/main.o: main.c \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\string.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdlib.h \
  c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stddef.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdio.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\inttypes.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdint.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdint.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdarg.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\string.h \
+ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\math.h \
  mcc_generated_files/system/system.h \
  mcc_generated_files/system/../system/utils/compiler.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\sfr_defs.h \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\inttypes.h \
- c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdint.h \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdint.h \
  C:/Users/M68150/.mchp_packs/Microchip/AVR-Dx_DFP/2.1.152/xc8/avr/include/avr/ioavr128da48.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\portpins.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\common.h \
@@ -19,7 +23,6 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\xc.h \
  c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\cci.h \
  c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdbool.h \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdlib.h \
  mcc_generated_files/system/../system/utils/interrupt_avr8.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\interrupt.h \
  mcc_generated_files/system/../system/clock.h \
@@ -30,8 +33,6 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  mcc_generated_files/system/../system/./port.h \
  mcc_generated_files/system/../system/./utils/compiler.h \
  mcc_generated_files/system/../i2c_host/twi0.h \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdio.h \
- c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdarg.h \
  mcc_generated_files/system/../i2c_host/i2c_host_types.h \
  mcc_generated_files/system/../i2c_host/i2c_host_interface.h \
  mcc_generated_files/system/../i2c_host/i2c_host_event_types.h \
@@ -46,9 +47,23 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  mcc_generated_files/system/../system/../system/utils/atomic.h \
  headers/BMI160_INIT.h
 
-c:\program\ files\microchip\xc8\v2.32\avr\avr\include\string.h:
+c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdlib.h:
 
 c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stddef.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdio.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\avr\include\inttypes.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdint.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdint.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdarg.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\avr\include\string.h:
+
+c:\program\ files\microchip\xc8\v2.32\avr\avr\include\math.h:
 
 mcc_generated_files/system/system.h:
 
@@ -57,12 +72,6 @@ mcc_generated_files/system/../system/utils/compiler.h:
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h:
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\sfr_defs.h:
-
-c:\program\ files\microchip\xc8\v2.32\avr\avr\include\inttypes.h:
-
-c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdint.h:
-
-c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdint.h:
 
 C:/Users/M68150/.mchp_packs/Microchip/AVR-Dx_DFP/2.1.152/xc8/avr/include/avr/ioavr128da48.h:
 
@@ -86,8 +95,6 @@ c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\cci.h:
 
 c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdbool.h:
 
-c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdlib.h:
-
 mcc_generated_files/system/../system/utils/interrupt_avr8.h:
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\interrupt.h:
@@ -107,10 +114,6 @@ mcc_generated_files/system/../system/./port.h:
 mcc_generated_files/system/../system/./utils/compiler.h:
 
 mcc_generated_files/system/../i2c_host/twi0.h:
-
-c:\program\ files\microchip\xc8\v2.32\avr\avr\include\stdio.h:
-
-c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdarg.h:
 
 mcc_generated_files/system/../i2c_host/i2c_host_types.h:
 
