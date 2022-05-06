@@ -14,7 +14,7 @@ if (!$result) {
 
 $rows = $result -> fetch_all(MYSQLI_ASSOC);
 
-//print_r($row);
+print_r($row);
 
 //header('Content-Type: application/json');
 //echo json_encode($rows);
@@ -49,7 +49,7 @@ body {
       function initMap() {
         
         var mapLayer = document.getElementById("map-layer");
-		var centerCoordinates = new google.maps.LatLng(-33.890541, 151.274857);
+		var centerCoordinates = new google.maps.LatLng(44.43502165849305, 26.102333525991632);
 		var defaultOptions = { center: centerCoordinates, zoom: 10 }
 
 		map = new google.maps.Map(mapLayer, defaultOptions);
