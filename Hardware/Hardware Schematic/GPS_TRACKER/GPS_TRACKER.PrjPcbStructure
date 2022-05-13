@@ -1,1 +1,2 @@
-Record=TopLevelDocument|FileName=GPS_TRACKER_PROTOTYPE_SCHEMATIC.SchDoc|SheetNumber=1
+Record=TopLevelDocument|FileName=MCU+Power_Supply+Accel.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=MCU+Power_Supply+Accel.SchDoc|FileName=SIM808+RF.SchDoc|SheetNumber=2
