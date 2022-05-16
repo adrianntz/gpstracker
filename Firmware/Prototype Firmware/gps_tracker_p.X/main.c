@@ -127,23 +127,24 @@ void USART0_Print(const char* string)
 
 void SIM808_RECIEVE()
 {
-    if(USART0.RXDATAL=='$')
+    char rxdata=USART0.RXDATAL;
+    if(rxdata=='$')
                 GPS_Info_Flag = true;   
     //We signal in the Recieve Interrupt Vector to store the data 
     if (GPS_Info_Flag == true)                               // GPS_Info_Flag atentioneaza sa se stocheze datele in buffer
      {
-         GPS_USART0_Buffer[GPS_Buffer_Index++] = USART0.RXDATAL; 
+         GPS_USART0_Buffer[GPS_Buffer_Index++] = rxdata; 
                                                                 //buffer pt coordonate GPS
-        if (USART0.RXDATAL == '*') //We stop storing the GPS data at the checksum 
+        if (rxdata == '*') //We stop storing the GPS data at the checksum 
         {
           GPS_Info_Flag = false;
           GPS_Buffer_Index = 0;
         }
     } 
     else
-        USART_DummyBuffer = USART0.RXDATAL;       //The RXC interrupt flag is cleard only when RXDATAL is read.
+        USART_DummyBuffer = rxdata;       //The RXC interrupt flag is cleard only when RXDATAL is read.
      
-    USART1_Write(USART0.RXDATAL);
+    USART1_Write(rxdata);
     
     
 }
