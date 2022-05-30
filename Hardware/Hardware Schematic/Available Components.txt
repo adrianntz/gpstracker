@@ -1,0 +1,4 @@
+MCP1207T-2802E/CB 
+	https://ro.farnell.com/microchip/mcp1702t-2802e-cb/ldo-fixed-2-8v-0-25a-sot-23a-3/dp/2851550?st=mcp1702t
+LIS12HH12TR
+	https://ro.farnell.com/stmicroelectronics/lis2hh12tr/mems-accelerometer-2g-4g-8g-lga/dp/2762755?st=lis2hh12tr

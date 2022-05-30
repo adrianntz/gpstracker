@@ -33,11 +33,10 @@ FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
 IsVirtualBomDocumentRemoved=0
-OutputPath=Project Outputs for GPS_TRACKER
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
-CurrentVariant=Variant of GPS_TRACKER1
 
 [Preferences]
 PrefsVaultGUID=
@@ -133,9 +132,12 @@ UniqueID=408C2D45-3ABD-479C-A9D3-E94799D2EAA5
 Description=Variant of GPS_TRACKER1
 AllowFabrication=0
 ParameterCount=0
-VariationCount=2
+VariationCount=5
 Variation1=Designator=C17_1|UniqueId=\JQMRUDTJ|Kind=1|AlternatePart= 
 Variation2=Designator=C18_1|UniqueId=\CITFTEEX|Kind=1|AlternatePart= 
+Variation3=Designator=R?|UniqueId=\FVMIBPYK|Kind=1|AlternatePart= 
+Variation4=Designator=R9_2|UniqueId=\ZNCUPKZF|Kind=1|AlternatePart= 
+Variation5=Designator=R10_2|UniqueId=\ILKDDHXN|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Configuration1]
@@ -185,7 +187,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=Project Outputs for GPS_TRACKER
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
