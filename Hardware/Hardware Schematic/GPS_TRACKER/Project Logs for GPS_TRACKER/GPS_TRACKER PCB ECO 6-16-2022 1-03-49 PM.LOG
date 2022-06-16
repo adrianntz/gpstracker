@@ -1,0 +1,30 @@
+Change Component Designator: OldDesignator=BATTERY HOLDER NewDesignator=U1_1
+Change Component Designator: OldDesignator=CP2102N NewDesignator=U5_1
+Change Component Designator: OldDesignator=GPS_ANT NewDesignator=ANT2_2
+Change Component Designator: OldDesignator=GPS_COAX NewDesignator=J3_2
+Change Component Designator: OldDesignator=GSM_ANT NewDesignator=ANT1_2
+Change Component Designator: OldDesignator=GSM_COAX NewDesignator=J2_2
+Change Component Designator: OldDesignator=LIS331 NewDesignator=U4_1
+Change Component Designator: OldDesignator=MCU NewDesignator=U2_1
+Change Component Designator: OldDesignator=NETLIGHT NewDesignator=D2_2
+Change Component Designator: OldDesignator=SIM808 NewDesignator=IC1_2
+Change Component Designator: OldDesignator=STATUS NewDesignator=D3_2
+Change Component Designator: OldDesignator=USB NewDesignator=J1_1
+Change Component Designator: OldDesignator=VBAT NewDesignator=D3_1
+Change Net Name : Old Net Name= New Net Name=
+Added Member To Class: ClassName=SIM808+RF Member=Component ANT1_2 0868AT43A0020E
+Added Member To Class: ClassName=SIM808+RF Member=Component ANT2_2 1462350001
+Added Member To Class: ClassName=SIM808+RF Member=Component D2_2 LED_red
+Added Member To Class: ClassName=MCU+Power_Supply+Accel Member=Component D3_1 LED_green_true
+Added Member To Class: ClassName=SIM808+RF Member=Component D3_2 LED_red
+Added Member To Class: ClassName=SIM808+RF Member=Component IC1_2 GSM808
+Added Member To Class: ClassName=MCU+Power_Supply+Accel Member=Component J1_1 105017-0001
+Added Member To Class: ClassName=SIM808+RF Member=Component J2_2 MM8030-2610RJ3
+Added Member To Class: ClassName=SIM808+RF Member=Component J3_2 MM8030-2610RJ3
+Added Member To Class: ClassName=MCU+Power_Supply+Accel Member=Component U1_1 Battery Holder - 1042
+Added Member To Class: ClassName=MCU+Power_Supply+Accel Member=Component U2_1 AVR64DD32-I/PT
+Added Member To Class: ClassName=MCU+Power_Supply+Accel Member=Component U4_1 LIS331DLHTR
+Added Member To Class: ClassName=MCU+Power_Supply+Accel Member=Component U5_1 CP2102N-A02-GQFN20
+Added Member To Class: ClassName=RF Member=Wire GPS_ANT
+Added Room: Name=MCU+Power_Supply+Accel
+Added Room: Name=SIM808+RF
