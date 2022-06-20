@@ -14,7 +14,7 @@ Putem Inlocui cu CP2102N , care are un regulator intern de 3.3V. Astfel, scapam 
 https://ro.mouser.com/ProductDetail/Silicon-Labs/CP2102N-A02-GQFN20?qs=u16ybLDytRaG8WdlP0fT2g%3D%3D
 
 
- X  U5_1: MIC5504-3.3V https://ro.mouser.com/ProductDetail/Microchip-Technology/MIC5504-3.3YMT-TR?qs=U6T8BxXiZAXSMo5l9E%252BMAA%3D%3D
+U5_1: MIC5504-3.3V https://ro.mouser.com/ProductDetail/Microchip-Technology/MIC5504-3.3YMT-TR?qs=U6T8BxXiZAXSMo5l9E%252BMAA%3D%3D
 
 J1_1: MicroUSB: https://ro.mouser.com/ProductDetail/Amphenol-FCI/10118194-0001LF?qs=Ywefl8B65e4FIdY8OWfRQA%3D%3D
 
@@ -23,7 +23,7 @@ J3_1 & J4_1 & J5_1 : -
 
 Baterie : Li-Ion 2200mAh 3.6V https://www.tme.eu/ro/details/accu-18650-2.2p-hv/acumulatori/samsung-sdi/icr-18650-22p/
 
-Battery Holder: https://ro.mouser.com/ProductDetail/Keystone-Electronics/1042?qs=%2F7TOpeL5Mz4qPdWi9tuLKw%3D%3DVZ5BoCR0GxgD8EAQYASABEgILSfD_BwE
+Battery Holder: https://www.tme.eu/ro/details/bhc-18650-1p/baterii-carcase/comf/?brutto=1&currency=RON&gclid=EAIaIQobChMI95iSrpyR-AIVZ5BoCR0GxgD8EAQYASABEgILSfD_BwE
 
 Red LED 0603 : https://ro.mouser.com/ProductDetail/Wurth-Elektronik/150060RS75000?qs=LlUlMxKIyB3QnmZ3fw%2FVCA%3D%3D
 
@@ -31,10 +31,10 @@ Blue LED 0603 : https://ro.mouser.com/ProductDetail/Wurth-Elektronik/150060BS750
 
 Green LED 0603 : https://ro.mouser.com/ProductDetail/Wurth-Elektronik/150060GS75000?qs=LlUlMxKIyB0UYkq5lDO8nA%3D%3D
 
-R 1k 0603 https://ro.mouser.com/ProductDetail/YAGEO/RT0603FRE071KL?qs=8cPjvKtxWv68ZVEzoi6JxQ%3D%3D
 R 4.7k 0603: https://ro.mouser.com/ProductDetail/YAGEO/RC0603JR-074K7L?qs=%2F9ZTgpVJnN7SlR9TL5EAvw%3D%3D
 R 47k 0603: https://ro.mouser.com/ProductDetail/YAGEO/RC0603JR-1047KL?qs=fRxXYNj8ftFCH6obQ4GdBw%3D%3D
 R 0ohm 0603: https://ro.mouser.com/ProductDetail/Vishay-Dale/CRCW06030000Z0EBC?qs=sGAEpiMZZMtlubZbdhIBIEVnJA25NYWZIWCP%2FvvRjRA%3D
+R 100R 0603: https://ro.mouser.com/ProductDetail/Vishay-Dale/CRCW0603100RJNEB?qs=KP%252BPudsHLdxWOy%2FUTWm2vg%3D%3D
 R 220R 0603: https://ro.mouser.com/ProductDetail/YAGEO/RC0603JR-07220RL?qs=sGAEpiMZZMukHu%252BjC5l7YeZc3aW7s7s7wgL3L%252BJ%252BtRk%3D
 R 22R 0603: https://ro.mouser.com/ProductDetail/YAGEO/RC0603FR-1322R1L?qs=sGAEpiMZZMukHu%252BjC5l7YeHfFPt6u6YIVnoenQ%252BN1Gk%3D
 R 220k 0603: https://ro.mouser.com/ProductDetail/Bourns/CR0603-JW-224ELF?qs=sGAEpiMZZMukHu%252BjC5l7Yf3v5v9%2FZ7gbcIcf%252Bxa2qF0%3D
@@ -44,7 +44,7 @@ Cap 0.1uF 0603 : https://ro.mouser.com/ProductDetail/Taiyo-Yuden/EMK107B7104KA-T
 Cap 1uF 0603   :https://ro.mouser.com/ProductDetail/Samsung-Electro-Mechanics/CL10A105KO8NNNC?qs=sGAEpiMZZMukHu%252BjC5l7YYGmAoeK13S1XYHTu0c6%252BaA%3D
 Cap 4.7uF 0603: https://ro.mouser.com/ProductDetail/Samsung-Electro-Mechanics/CL10A475KP8NNNC?qs=sGAEpiMZZMukHu%252BjC5l7YYGmAoeK13S1oGdswuJ9pKk%3D
 Cap 2.2uF 0603: https://ro.mouser.com/ProductDetail/KEMET/C0603C225K4PAC?qs=sGAEpiMZZMukHu%252BjC5l7YeAj0tT4Qbhuq0bfyqzTSvw%3D
-X Cap 0.47uF 0603: https://ro.mouser.com/ProductDetail/Wurth-Elektronik/885012206075?qs=sGAEpiMZZMukHu%252BjC5l7YRTxnIahtzp%252BqI9n01uko8c%3D
+Cap 0.47uF 0603: https://ro.mouser.com/ProductDetail/Wurth-Elektronik/885012206075?qs=sGAEpiMZZMukHu%252BjC5l7YRTxnIahtzp%252BqI9n01uko8c%3D
 Cap 10uF 0603:	https://ro.mouser.com/ProductDetail/Taiyo-Yuden/JMK107ABJ106KA-T?qs=sGAEpiMZZMukHu%252BjC5l7Yd8IIWTQlTYBHqP8J%252B5Lwz4%3D
 Cap 100uF Tantulum: https://ro.mouser.com/ProductDetail/Vishay-Sprague/293D107X0010C2TE3?qs=sGAEpiMZZMsh%252B1woXyUXj1Wrq%252BukvzZEcKpvWqwJuZ4%3D
 
@@ -53,14 +53,15 @@ Cap 33pF 0603: https://ro.mouser.com/ProductDetail/YAGEO/CC0603GRNPO9BN330?qs=sG
 Cap 10pF 0603: https://ro.mouser.com/ProductDetail/Samsung-Electro-Mechanics/CL03C100JB3NNNC?qs=sGAEpiMZZMsh%252B1woXyUXj9e2R%2FOkAO5o%252B307nfCQ6Us%3D
 Cap 3.9pF 0603: https://ro.mouser.com/ProductDetail/Walsin/0603N3R9C500CT?qs=sGAEpiMZZMsh%252B1woXyUXj9Vc%2FsqQGnyVZ0PEFVXqHK0%3D
 Cap 0.3pF 0603:https://ro.mouser.com/ProductDetail/Walsin/0603N0R3C500CT?qs=sGAEpiMZZMsh%252B1woXyUXj6GIMbU2VNPkLSGg5RhP5Ds%3D
-cap 13pF 0603: https://ro.mouser.com/ProductDetail/Murata-Electronics/GRM1885C2A130JA01D?qs=sGAEpiMZZMsh%252B1woXyUXj8DozXQTS8amS3aJllILXAU%3D
+
 Ind 18nH 0603: https://ro.mouser.com/ProductDetail/Kyocera-AVX/LCCI0603J18NGTAR?qs=sGAEpiMZZMukHu%252BjC5l7YYwDVDSyjjx90tn3UhqvpiE%3D
-Ind 5.1nH 0603 :https://ro.mouser.com/ProductDetail/Murata-Electronics/LQW18AS5N1J00D?qs=RGKEq0WBTP70kfyNOB%2Fiog%3D%3D
-MOSFET SOT-23-3: https://ro.mouser.com/ProductDetail/Toshiba/T2N7002BKLM?qs=lX6dEUlT%252BgfTnU11z%2FTylg%3D%3D
+Ind 5.1nH 0805 :https://ro.mouser.com/ProductDetail/Bourns/CE201210-18NJ?qs=TkkmMb5HBbQvKIZZgaixpw%3D%3D
+ 
+MOSFET SOT-23-3: https://ro.mouser.com/ProductDetail/Microchip-Technology/2N7002-G?qs=D%2FHwGy7fPj%2F0m3YgJ%252BOEvg%3D%3D
 
-Zener 5.1V SOD-123: https://ro.mouser.com/ProductDetail/Micro-Commercial-Components-MCC/BZT52C5V1-TP?qs=ZNK0BnemlqGS%2FcMHrWMpww%3D%3D
+Zener 5.1V SOD-123:L https://ro.mouser.com/ProductDetail/Rectron/BZT52B5V1?qs=w%2Fv1CP2dgqrFbZ6v14q8eg%3D%3D
 
-TVS Diode Array 5 channel:https://ro.mouser.com/ProductDetail/Semtech/SMF05C.TCT?qs=rBWM4%252BvDhIcdGOAFdL4XAA%3D%3D
+TVS Diode Array 5 channel: https://ro.mouser.com/ProductDetail/onsemi/SMF05CT1G?qs=xZq1yRCsb1c8sZHBbx4IBw%3D%3D
 
 
 Nano SIM card holder: https://ro.mouser.com/ProductDetail/GCT/SIM8051-6-0-14-01-A?qs=KUoIvG%2F9IlY59WlWFZJUYA%3D%3D
