@@ -33,7 +33,7 @@ FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
 IsVirtualBomDocumentRemoved=0
-OutputPath=
+OutputPath=Project Outputs for GPS_TRACKER
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -138,12 +138,14 @@ UniqueID=408C2D45-3ABD-479C-A9D3-E94799D2EAA5
 Description=Variant of GPS_TRACKER1
 AllowFabrication=0
 ParameterCount=0
-VariationCount=5
+VariationCount=7
 Variation1=Designator=C17_1|UniqueId=\JQMRUDTJ|Kind=1|AlternatePart= 
 Variation2=Designator=C18_1|UniqueId=\CITFTEEX|Kind=1|AlternatePart= 
 Variation3=Designator=R?|UniqueId=\FVMIBPYK|Kind=1|AlternatePart= 
 Variation4=Designator=R9_2|UniqueId=\ZNCUPKZF|Kind=1|AlternatePart= 
 Variation5=Designator=R10_2|UniqueId=\ILKDDHXN|Kind=1|AlternatePart= 
+Variation6=Designator=R?|UniqueId=\LFFZHLKK|Kind=1|AlternatePart= 
+Variation7=Designator=R6_1|UniqueId=\VHUCFUUW|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Configuration1]
@@ -193,12 +195,12 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for GPS_TRACKER
 
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=CadnetixNetlist
 OutputName1=Cadnetix Netlist
@@ -309,7 +311,7 @@ OutputDefault21=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AdvSimNetlist
 OutputName1=Mixed Sim
@@ -394,7 +396,7 @@ PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup4]
 Name=Assembly Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Assembly
 OutputName1=Assembly Drawings
@@ -416,7 +418,7 @@ OutputDefault3=0
 [OutputGroup5]
 Name=Fabrication Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Board Stack Report
 OutputName1=Report Board Stack
@@ -488,7 +490,7 @@ OutputDefault12=0
 [OutputGroup6]
 Name=Report Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=BOM_PartType
 OutputName1=Bill of Materials
@@ -537,7 +539,7 @@ OutputDefault8=0
 [OutputGroup7]
 Name=Other Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Text Print
 OutputName1=Text Print
@@ -645,7 +647,7 @@ PageOptions17=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup8]
 Name=Validation Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=BOM_Violations
 OutputName1=BOM Checks Report
@@ -689,7 +691,7 @@ OutputDefault7=0
 [OutputGroup9]
 Name=Export Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AutoCAD dwg/dxf PCB
 OutputName1=AutoCAD dwg/dxf File PCB
@@ -750,7 +752,7 @@ OutputDefault11=0
 [OutputGroup10]
 Name=PostProcess Outputs
 Description=
-TargetPrinter=\\rob-vm-print\rob-pr-virtual
+TargetPrinter=\\rob-vm-print\ROB-PR-Virtual
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Copy Files
 OutputName1=Copy Files
