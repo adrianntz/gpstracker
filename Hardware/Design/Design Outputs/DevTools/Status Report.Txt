@@ -1,14 +1,17 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 6:07:13 PM On 6/29/2022
+Start Output Generation At 1:24:26 PM On 7/4/2022
 
-Output: BOM
-Type  : BOM
-From  : Variant [Variant of GPS_TRACKER1] of Project [GPS_TRACKER.PrjPcb]
-   Generated File[//microchiptechnology-my.sharepoint.com/personal/adrian_neata_microchip_com/Documents/Desktop/MCU8NPIAPPS Repo's/GPS Tracker Internship/Hardware/Hardware Schematic/GPS_TRACKER/Project_Outputs/DevTools/02-ProjectPCBAssyNumber-RProjectRevisionASSY_BOM.xls]
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [GPS_TRACKER.PcbDoc]
+   Generated File[04-ProjectPCBNumber-RProjectRevisionART-RoundHoles.TXT]
+   Generated File[04-ProjectPCBNumber-RProjectRevisionART-SlotHoles.TXT]
+   Generated File[04-ProjectPCBNumber-RProjectRevisionART.LDP]
+   Generated File[04-ProjectPCBNumber-RProjectRevisionART.DRR]
 
 
-Files Generated   : 1
+Files Generated   : 4
 Documents Printed : 0
 
-Finished Output Generation At 6:08:02 PM On 6/29/2022
+Finished Output Generation At 1:24:26 PM On 7/4/2022
