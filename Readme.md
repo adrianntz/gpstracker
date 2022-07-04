@@ -23,7 +23,7 @@ This is an internship project aiming to build a portable GPS Tracker which sends
 A number of hardware modules were used in order to create this project
 
 -  [SIM808 | SIMCom ](https://simcom.ee/modules/gsm-gprs-gnss/sim808/) - GSM and GPS module used for GPS tracking and mobile communication
-- [6DOF IMU 2 Click BMI160 Breakout Board  ](https://www.mikroe.com/6dof-imu-2-click)  or [LIS331DLHTR](https://www.mikroe.com/6dof-imu-2-click)- Power efficient accelerometer used to detect sudden motion.
+- [6DOF IMU 2 Click BMI160 Breakout Board  ](https://www.mikroe.com/6dof-imu-2-click)  or [LIS331DLHTR](https://www.st.com/en/mems-and-sensors/lis331dlh.html)- Power efficient accelerometer used to detect sudden motion.
 - [MCHP AVR128DA32 Microcontroller](https://www.microchip.com/en-us/product/AVR128DA32/) - AVR architecture based microcontroller used for main processing and coordination of the GPS tracker.
 
 ## Application
