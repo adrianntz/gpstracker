@@ -1,0 +1,17 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 3:56:27 PM On 7/4/2022
+
+Output: Copy Project Files
+Type  : Copy Files
+From  : Project [GPS_TRACKER.PrjPcb]
+   Generated File[GPS_TRACKER.PrjPcb]
+   Generated File[MCU+Power_Supply+Accel.SchDoc]
+   Generated File[SIM808+RF.SchDoc]
+   Generated File[GPS_TRACKER.PcbDoc]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 3:56:27 PM On 7/4/2022

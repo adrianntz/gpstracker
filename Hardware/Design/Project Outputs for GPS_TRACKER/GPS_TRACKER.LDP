@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\m68150\OneDrive - Microchip Technology Inc\Desktop\MCU8NPIAPPS Repo's\GPS Tracker Internship\Hardware\Design\GPS_TRACKER.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=gps_tracker-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=gps_tracker-slotholes.txt|DrillLayers=gtl,gbl

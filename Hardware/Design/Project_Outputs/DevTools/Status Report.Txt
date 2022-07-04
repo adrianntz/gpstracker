@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 3:56:48 PM On 7/4/2022
+
+Output: BOM
+Type  : BOM
+From  : Variant [Variant of GPS_TRACKER1] of Project [GPS_TRACKER.PrjPcb]
+   Generated File[//microchiptechnology-my.sharepoint.com/personal/adrian_neata_microchip_com/Documents/Desktop/MCU8NPIAPPS Repo's/GPS Tracker Internship/Hardware/Design/Project_Outputs/DevTools/02-ProjectPCBAssyNumber-RProjectRevisionASSY_BOM.xls]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 3:57:17 PM On 7/4/2022

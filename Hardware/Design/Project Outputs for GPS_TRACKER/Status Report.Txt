@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [GPS_TRACKER.PrjPcb]
+   Generated File[GPS_TRACKER-RoundHoles.TXT]
+   Generated File[GPS_TRACKER-SlotHoles.TXT]
+   Generated File[GPS_TRACKER.LDP]
+   Generated File[GPS_TRACKER.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 3:42:58 PM On 7/4/2022
