@@ -36,6 +36,7 @@
 #include <math.h>
 #include "mcc_generated_files/system/system.h"
 #include "headers/BMI160_INIT.h"
+#include "avr/sleep.h"
 /*
     Main application
 */
@@ -188,7 +189,7 @@ int main(void)
     
     uint8_t STATE = SLEEP;
     
-    printf(" [CONSOLE] Module Initialized\r\n");
+    printf("[CONSOLE] Module Initialized\r\n");
      while (true) 
     {
          
@@ -212,6 +213,7 @@ int main(void)
         {
           STATE = GET_GPS;
           Movement_Sensor_Status = false;
+          printf("[CONSOLE] Movement Detected\r\n");
         }
 
         /*
@@ -292,6 +294,8 @@ void Sleep_Mode_Init()
         SET_DTR(HIGH);
         do_once_flag = true;
         GPS_USART0_Buffer[0]=0;         //clear buffer
+        set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+        sleep_mode();
       }
       
 }
@@ -328,7 +332,7 @@ void GPS_Coordonates_Send()
                                    DecimalDegrees_and_Minutes.Lng_Dir_DecMin);
         }
         /* For Debugging reasons, we print out the GPS counter*/
-        printf("\n [CONSOLE] GPS COUNT: %d\n",--Get_GPS_Cnt);
+        printf("[CONSOLE] GPS COUNT: %d\n\r",--Get_GPS_Cnt);
     }
 }
 
@@ -364,7 +368,7 @@ char * NMEA_Parse(char *NMEA_Sentence,char *output)
     else
         {
             snprintf(output, OUTPUT_BUFFER_SIZE, "Invalid\n");
-            printf("\n[CONSOLE] INVALID\n");
+            printf("[CONSOLE] INVALID\n\r");
         }
 
     return output;
