@@ -1,11 +1,11 @@
 /**
- * CONFIGURATION BITS Generated Driver Source File
+ * System Driver Header File
  * 
- * @file config_bits.c
+ * @file system.h
  * 
- * @ingroup config_bitsdriver
+ * @defgroup systemdriver System Driver
  * 
- * @brief This is the generated Device Configuration Bits file.
+ * @brief This is the generated header file for the System Driver.
  *
  * @version Driver Version 1.0.1
 */
@@ -30,22 +30,39 @@
     THIS SOFTWARE.
 */
 
-/**
-   Section: Included Files
- */
-#include <avr/io.h>
+
+#ifndef MCC_H
+#define	MCC_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /**
- * Configures Fuse bits
- */
+  Section: Included Files
+*/
+#include "../system/utils/compiler.h"
+#include "config_bits.h"
+#include "../system/clock.h"
+#include "../system/pins.h"
+#include "../i2c_host/twi0.h"
+#include "../timer/rtc.h"
+#include "../uart/usart0.h"
+#include "../uart/usart1.h"
+#include "../system/interrupt.h"
+/**
+ * @ingroup systemdriver
+ * @brief This initializes the system module and must be called before any other API is called.
+ * This routine should only be called once during system initialization.
+ * @param None
+ * @return None
+*/
+void SYSTEM_Initialize(void);
 
-FUSES = 
-{
-  .BODCFG = ACTIVE_DISABLE_gc | LVL_BODLEVEL0_gc | SAMPFREQ_128Hz_gc | SLEEP_DISABLE_gc,
-  .BOOTSIZE = 0x0,
-  .CODESIZE = 0x0,
-  .OSCCFG = CLKSEL_OSCHF_gc,
-  .SYSCFG0 = CRCSEL_CRC16_gc | CRCSRC_NOCRC_gc | RSTPINCFG_GPIO_gc,
-  .SYSCFG1 = SUT_0MS_gc,
-  .WDTCFG = PERIOD_OFF_gc | WINDOW_OFF_gc,
-};
+#ifdef __cplusplus
+}
+#endif
+#endif	/* MCC_H */
+/**
+ End of File
+*/

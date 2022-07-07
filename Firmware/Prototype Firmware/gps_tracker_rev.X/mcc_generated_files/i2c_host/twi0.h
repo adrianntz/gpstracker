@@ -1,7 +1,7 @@
 /**
  * TWI0 Generated Driver API Header File
  *
- * @file {moduleGroupNameLowerCase}.h
+ * @file twi0.h
  *
  * @defgroup twi0_host TWI0_HOST
  *
@@ -34,20 +34,12 @@
 #ifndef TWI0_H
 #define TWI0_H
 
-/**
-  Section: Included Files
-*/
-
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include "i2c_host_types.h"
 #include "i2c_host_interface.h"
 #include "i2c_host_event_types.h"
-
-/**
- Section: Data Type Definitions
-*/
 
 #define i2c0_host_host_interface I2C0_Host
 
@@ -60,18 +52,24 @@
 #define I2C0_Host_ErrorGet TWI0_ErrorGet
 #define I2C0_Host_IsBusy TWI0_IsBusy
 #define I2C0_Host_CallbackRegister TWI0_CallbackRegister
+#define I2C0_Host_Tasks TWI0_Tasks
+
+/**
+ Section: Data Type Definitions
+*/
 
 extern const i2c_host_interface_t I2C0_Host;
 
 #define TWI0_BAUD(F_SCL, T_RISE)    \
-    ((((((float) 4000000 / (float)F_SCL)) - 10 - ((float)4000000 * T_RISE / 1000000))) / 2)
+    ((((((float)4000000 / (float)F_SCL)) - 10 - ((float)4000000 * T_RISE / 1000000))) / 2)
+
 
 /**
  * @ingroup i2c_host
  * @brief This API initializes the I2C0_Host driver.
  * @param none
  * @return none
- */
+ */ 
 void TWI0_Initialize(void);
 
 /**
@@ -122,7 +120,10 @@ bool TWI0_WriteRead(uint16_t address, uint8_t *writeData, size_t writeLength, ui
  * @ingroup i2c_host
  * @brief This function get the error occurred during I2C Transmit and Receive.
  * @param none
- * @return i2c_host_error_t - I2C error code staus.
+ * @retval  I2C_CLIENT_ERROR_BUS_COLLISION    - I2C Bus Collision Error
+ * @retval  I2C_CLIENT_ERROR_WRITE_COLLISION  - I2C Write Collision Error
+ * @retval  I2C_CLIENT_ERROR_RECEIVE_OVERFLOW - I2C Receive overflow
+ * @retval  I2C_CLIENT_ERROR_NONE             - No Error
  */
 i2c_host_error_t TWI0_ErrorGet(void);
 
@@ -137,18 +138,18 @@ bool TWI0_IsBusy(void);
 
 /**
  * @ingroup i2c_host
- * @brief Setter function for I2C interrupt callback, This will be called when any error is generated.
- * @param void *handler - Pointer to custom Callback.
+ * @brief This is polling function for non interrupt mode.
+ * @param none
  * @return none
  */
-void TWI0_CallbackRegister(void (*handler)(void));
+void TWI0_Tasks(void);
 
 /**
  * @ingroup i2c_host
- * @brief Setter function for I2C Error interrupt callback.
- * @param void *handler - Pointer to custom Callback.
+ * @brief Setter function for I2C interrupt callback, This will be called when any error is generated.
+ * @param void *CallbackHandler - Pointer to custom Callback.
  * @return none
  */
-void TWI0_ErrorCallbackRegister(void (*handler)(void));
+void TWI0_CallbackRegister(void (*callbackHandler)(void));
 
 #endif //TWI0_H

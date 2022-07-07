@@ -1,9 +1,8 @@
-#define F_CPU 4000000UL
 
 #include <avr/io.h>
+#include "../../gps_tracker_rev.X/headers/i2c.h"
+#include "../mcc_generated_files/timer/delay.h"
 #include "../mcc_generated_files/i2c_host/twi0.h"
-#include "../headers/i2c.h"
-#include <util/delay.h>
 
 #define READ_BYTE 0x01
 #define BMI_ADDRESS 0x68
@@ -29,7 +28,7 @@ void i2c_MasterResetBus() {
 void I2C_0_EndSession(void) {
   TWI0.MCTRLB = TWI_MCMD_STOP_gc;
   i2c_MasterResetBus();
-  _delay_us(400); //minimum delay between consecutive i2c data exchanges for bmi160
+  DELAY_microseconds(400); //minimum delay between consecutive i2c data exchanges for bmi160
 }
 
 
@@ -55,12 +54,12 @@ void BMI_160_INIT(void) {
   REGISTER_AND_DATA[0] = BMI160_REG_CMD;//0x7e
   REGISTER_AND_DATA[1] = 0xB6; //soft reset for bmi160
   i2c_write(BMI_ADDRESS, REGISTER_AND_DATA, 2);
-  _delay_ms(55); // wait for bmi160 to stabilize
+  DELAY_milliseconds(55); // wait for bmi160 to stabilize
 
   REGISTER_AND_DATA[0] = BMI160_REG_CMD;
   REGISTER_AND_DATA[1] = 0x12; //set the accelerometer to LPM mode
   i2c_write(BMI_ADDRESS, REGISTER_AND_DATA, 2);
-  _delay_ms(5); // wait for bmi160 to stabilize
+  DELAY_milliseconds(5); // wait for bmi160 to stabilize
 
   REGISTER_AND_DATA[0] = BMI160_REG_ACC_CONF;//0x40
   REGISTER_AND_DATA[1] = 0x88; //set ODR to 100Hz with no average (45uA) 

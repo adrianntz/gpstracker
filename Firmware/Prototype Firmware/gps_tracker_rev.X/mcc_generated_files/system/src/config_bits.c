@@ -1,15 +1,14 @@
 /**
- * TWI0 Generated Driver API Header File
+ * CONFIGURATION BITS Generated Driver Source File
+ * 
+ * @file config_bits.c
+ * 
+ * @ingroup config_bitsdriver
+ * 
+ * @brief This is the generated Device Configuration Bits file.
  *
- * @file twi0_host_types.h
- *
- * @defgroup twi0 TWI0
- *
- * @brief This header file provides APIs for the TWI0 driver.
- *
- * @version TWI0 Driver Version 2.0.1
+ * @version Driver Version 1.0.2
 */
-
 /*
 © [2022] Microchip Technology Inc. and its subsidiaries.
 
@@ -17,7 +16,7 @@
     software and any derivatives exclusively with Microchip products. 
     You are responsible for complying with 3rd party license terms  
     applicable to your use of 3rd party software (including open source  
-    software) that may accompany Microchip software. SOFTWARE IS “AS IS.” 
+    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.? 
     NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS 
     SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,  
     MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
@@ -25,36 +24,28 @@
     INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY 
     KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF 
     MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE 
-    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP’S 
+    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S 
     TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
 
-#ifndef I2C_HOST_TYPES_H
-#define	I2C_HOST_TYPES_H
-
 /**
- * @ingroup twi0
- * @typedef enum i2c_host_error_t
- * @brief Enumeration for I2C_ERROR code
- */ 
-typedef enum
-{
-    I2C_ERROR_NONE,             /* No Error */
-    I2C_ERROR_ADDR_NACK,
-    I2C_ERROR_DATA_NACK,
-    I2C_ERROR_BUS_COLLISION,    /* Bus Collision Error */
-}i2c_host_error_t;
-
-/**
- * @ingroup twi0
- * @struct I2C_TRANSFER_SETUP structure
- * @brief Structure for I2C Clock Speed (100KHZ to 1MHZ)
+   Section: Included Files
  */
-struct I2C_TRANSFER_SETUP
-{
-  uint32_t clkSpeed;            // I2C Clock Speed 
-};
+#include <avr/io.h>
 
-#endif // end of I2C_HOST_TYPES_H
+/**
+ * Configures Fuse bits
+ */
+
+FUSES = 
+{
+  .BODCFG = ACTIVE_DISABLE_gc | LVL_BODLEVEL0_gc | SAMPFREQ_128Hz_gc | SLEEP_DISABLE_gc,
+  .BOOTSIZE = 0x0,
+  .CODESIZE = 0x0,
+  .OSCCFG = CLKSEL_OSCHF_gc,
+  .SYSCFG0 = CRCSEL_CRC16_gc | CRCSRC_NOCRC_gc | RSTPINCFG_GPIO_gc,
+  .SYSCFG1 = SUT_0MS_gc,
+  .WDTCFG = PERIOD_OFF_gc | WINDOW_OFF_gc,
+};

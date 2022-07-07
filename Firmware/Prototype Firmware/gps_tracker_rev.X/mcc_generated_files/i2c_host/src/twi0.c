@@ -89,12 +89,13 @@ const i2c_host_interface_t I2C0_Host = {
   .ErrorGet = TWI0_ErrorGet,
   .IsBusy = TWI0_IsBusy,
   .CallbackRegister = TWI0_CallbackRegister,
-  .Tasks = NULL
+  .Tasks = TWI0_Tasks
 };
 
 /**
  Section: Private Variable Definitions
  */
+
 static void (*TWI0_Callback)(void) = NULL;
 volatile i2c_event_status_t twi0_Status = {0};
 
@@ -122,8 +123,8 @@ void TWI0_Initialize(void)
     //Host Baud Rate Control
     TWI0.MBAUD = (uint8_t)TWI0_BAUD(104166, 0.1);
     
-    //ENABLE enabled; QCEN disabled; RIEN enabled; SMEN disabled; TIMEOUT DISABLED; WIEN disabled; 
-    TWI0.MCTRLA = 0x81;
+    //ENABLE enabled; QCEN disabled; RIEN false; SMEN disabled; TIMEOUT DISABLED; WIEN false; 
+    TWI0.MCTRLA = 0x1;
     
     //ARBLOST disabled; BUSERR disabled; BUSSTATE UNKNOWN; CLKHOLD disabled; RIF disabled; WIF disabled; 
     TWI0.MSTATUS = 0x0;
@@ -137,8 +138,8 @@ void TWI0_Initialize(void)
     //Host Data
     TWI0.MDATA = 0x0;
     
-	
-	TWI0.MCTRLB |= TWI_FLUSH_bm; 
+
+    TWI0.MCTRLB |= TWI_FLUSH_bm; 
     TWI0.MSTATUS |= TWI_BUSSTATE_IDLE_gc;
 
     TWI0_CallbackRegister(TWI0_DefaultCallback);
@@ -155,7 +156,7 @@ void TWI0_Deinitialize(void)
     //Host Baud Rate Control
     TWI0.MBAUD = (uint8_t)TWI0_BAUD(104166, 0.1);
     
-    //ENABLE enabled; QCEN disabled; RIEN enabled; SMEN disabled; TIMEOUT DISABLED; WIEN disabled; 
+    //ENABLE enabled; QCEN disabled; RIEN false; SMEN disabled; TIMEOUT DISABLED; WIEN false; 
     TWI0.MCTRLA = 0x00;
     
     //ARBLOST disabled; BUSERR disabled; BUSSTATE UNKNOWN; CLKHOLD disabled; RIF disabled; WIF disabled; 
@@ -254,10 +255,32 @@ void TWI0_CallbackRegister(void (*callbackHandler)(void))
     }
 }
 
+void TWI0_Tasks(void)
+{
+    bool retStatus = TWI0_IsBusy();
+    if (retStatus)
+    {
+        if(((TWI0.MSTATUS & TWI_RXACK_bm) && (TWI0.MSTATUS & TWI_WIF_bm) && (!(TWI0.MSTATUS & TWI_BUSERR_bm)) && (!(TWI0.MSTATUS & TWI_ARBLOST_bm))) || (TWI0.MSTATUS & TWI_BUSERR_bm) || (TWI0.MSTATUS & TWI_ARBLOST_bm))
+        {
+            TWI0_ErrorEventHandler();
+        }
+        if ((TWI0.MSTATUS & TWI_RIF_bm) || (TWI0.MSTATUS & TWI_WIF_bm))
+        {
+            if ((TWI0.MSTATUS & TWI_RXACK_bm) || (TWI0.MSTATUS & TWI_BUSERR_bm) || (TWI0.MSTATUS & TWI_ARBLOST_bm))
+            {
+                TWI0_ErrorEventHandler();
+            }
+            else
+            {
+                TWI0_EventHandler();
+            }
+        }
+    }
+}
+
 /**
  Section: Private Interfaces
  */
-
 static void TWI0_ReadStart(void)
 {
     twi0_Status.state = I2C_EVENT_SEND_RD_ADDR();
@@ -276,6 +299,7 @@ static void TWI0_Close(void)
     twi0_Status.readPtr = NULL;
     twi0_Status.state = I2C_STATE_IDLE;
     TWI0_ClearInterrupts();
+    TWI0_DisableInterrupts();
     TWI0.MSTATUS |= TWI_BUSSTATE_IDLE_gc;
 }
 
@@ -315,7 +339,6 @@ static void TWI0_ErrorEventHandler(void)
     {
         TWI0_Callback();
     }
-    
 }
 
 static void TWI0_DefaultCallback(void)
@@ -372,7 +395,7 @@ static i2c_event_states_t I2C_EVENT_TX(void)
 static i2c_event_states_t I2C_EVENT_RX(void)
 {
     i2c_event_states_t retEventState = I2C_STATE_RX;
-  
+
     if (twi0_Status.readLength == 1)
     {
         // Next byte will be last to be received, setup NACK
@@ -397,7 +420,7 @@ static i2c_event_states_t I2C_EVENT_RX(void)
         TWI0_HostSendNack();
         retEventState = I2C_EVENT_STOP();
     }
- 
+
     return retEventState;
 }
 
@@ -431,30 +454,9 @@ static i2c_event_states_t I2C_EVENT_RESET(void)
     return I2C_STATE_IDLE;
 }
 
-ISR(TWI0_TWIM_vect)
-{
-    if ((TWI0.MSTATUS & TWI_RXACK_bm) || (TWI0.MSTATUS & TWI_BUSERR_bm) || (TWI0.MSTATUS & TWI_ARBLOST_bm))
-    {
-        TWI0_ErrorEventHandler();
-    }
-
-    if ((TWI0.MSTATUS & TWI_RIF_bm) || (TWI0.MSTATUS & TWI_WIF_bm))
-    {
-        if ((TWI0.MSTATUS & TWI_RXACK_bm) || (TWI0.MSTATUS & TWI_BUSERR_bm) || (TWI0.MSTATUS & TWI_ARBLOST_bm))
-        {
-            TWI0_ErrorEventHandler();
-        }
-        else
-        {
-            TWI0_EventHandler();
-        }
-    }
-}
-
 /**
  Section: Register Level Interfaces
  */
-
 static uint8_t TWI0_GetRxData(void)
 {
     return TWI0.MDATA;
@@ -475,6 +477,7 @@ static inline void TWI0_ResetBus(void)
     //Set Clear Buffer Flag
     TWI0.MCTRLA &= ~(1 << TWI_ENABLE_bp);
     TWI0.MCTRLA |= 1 << TWI_ENABLE_bp;
+    TWI0.MSTATUS |= TWI_BUSSTATE_IDLE_gc;
 }
 
 static void TWI0_ClearInterruptFlag(void)

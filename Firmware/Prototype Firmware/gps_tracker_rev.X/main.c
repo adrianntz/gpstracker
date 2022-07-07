@@ -64,6 +64,7 @@
 #define LOW 0
 #define GET_GPS 0xA
 #define SLEEP 0xB
+#define VBUS (PORTD.IN & PIN2_bm)
 
 //GLOBAL VARIABLES
 
@@ -79,7 +80,10 @@ unsigned volatile int
 
 volatile bool           Delay_Flag = false, 
                         GPS_Info_Flag = false, 
-                        Movement_Sensor_Status = false;
+                        Movement_Sensor_Status = false,
+                        VBUS_Flag=false,
+                        USART_Control_Print_once=false,
+                        VBUS_Change_Flag=true;
 
 bool                        do_once_flag = false;
 volatile uint8_t        Timer_Cnt= 0;
@@ -108,7 +112,7 @@ void SET_PWKEY(bool setting) //Function to set PWKEY pin HIGH or LOW
   if (setting == 1)
     PORTC.OUTSET= PIN4_bm; //SET PWKEY HIGH
   if (setting == 0)
-     PORTC.OUTCLR=PIN4_bm; //SET PWKEY LOW
+    PORTC.OUTCLR=PIN4_bm; //SET PWKEY LOW
 }
 
 
@@ -152,9 +156,15 @@ void SIM808_RECIEVE()
 void Motion_Detected()
 {
     Movement_Sensor_Status=true;
-    PORTC.OUTTGL=PIN6_bm;
+    
 }
 
+void VBUS_Detect()
+{
+    VBUS_Change_Flag=true;
+    VBUS_Flag=!VBUS_Flag;
+    USART_Control_Print_once=false;
+}
 void GPS_ACQUIRE_TIMESTAMP()
 {
     Delay_Flag=true;
@@ -166,6 +176,40 @@ void CDC_TX()
                                       //o sa fie primit in rxbuffer.
    
                                       
+}
+
+void VBUS_Check()
+{
+    if(VBUS_Flag==true)
+        {
+        
+            //USART1_Initialize();
+            // USART1_Enable();
+            // USART1.STATUS|= (USART_BDF_bm|USART_ISFIF_bm|USART_RXSIF_bm|USART_TXCIF_bm|USART_DREIF_bm);
+            // USART1.RXDATAH|=( (1<<1) | (1<<2) );
+            //USART1.CTRLA|= USART_DREIE_bm;
+            PORTC.OUTCLR=PIN6_bm;
+            if(USART_Control_Print_once==false)
+            {
+                printf("[CONSOLE] USART1 Enabled\r\n");
+                USART_Control_Print_once=true;
+            }
+            
+        }
+        else
+        {
+            if(USART_Control_Print_once==false)
+            {
+                printf("[CONSOLE] USART1 Disabled\r\n");
+                USART_Control_Print_once=true;
+            }
+          
+            //DELAY_milliseconds(1000); 
+            //USART1_Deinitialize();    
+            //USART1_Disable();
+            PORTC.OUTCLR=PIN0_bm;// force USART1 TX Pin LOW
+            PORTC.OUTSET=PIN6_bm;
+        }
 }
 
 char * NMEA_Parse(char *NMEA_Sentence,char *output);
@@ -184,24 +228,47 @@ int main(void)
     BMI_160_INIT();
     RTC_SetOVFIsrCallback(GPS_ACQUIRE_TIMESTAMP);
     PD6_SetInterruptHandler(Motion_Detected);
+    PD2_SetInterruptHandler(VBUS_Detect);
     USART0_RxCompleteCallbackRegister(SIM808_RECIEVE);
     USART1_RxCompleteCallbackRegister(CDC_TX);
-    
+    TWI0_Deinitialize();
     uint8_t STATE = SLEEP;
     
     printf("[CONSOLE] Module Initialized\r\n");
+    
+                              
+    if(VBUS==PIN2_bm)        //We check for the first time when the device turns on 
+        VBUS_Flag=true;      //if the USB is plugged in or not. After that, everytime there is a change
+    else                    //(rising or falling) on the VBUS connected pin, we change the state
+        VBUS_Flag=false;
+    
+    
      while (true) 
     {
+         if(VBUS_Change_Flag==true)
+         {
+             VBUS_Check();
+             VBUS_Change_Flag=false;
+         }
          
         switch (STATE) 
         {
-            case GET_GPS:       GPS_Coordonates_Send();             PORTC.OUTCLR=PIN6_bm;
+            case GET_GPS:     
+                
+                GPS_Coordonates_Send();             
+                PORTC.OUTCLR=PIN6_bm;
                 break;
 
-            case SLEEP:          Sleep_Mode_Init();               PORTC.OUTSET=PIN6_bm;
+            case SLEEP:          
+                
+                
+                Sleep_Mode_Init();
                 break;
 
-            default:               Sleep_Mode_Init();           PORTC.OUTSET=PIN6_bm;
+            default:        
+                
+              //  PORTC.OUTSET=PIN6_bm;
+                Sleep_Mode_Init();
                 break;
         }
 
@@ -213,7 +280,9 @@ int main(void)
         {
           STATE = GET_GPS;
           Movement_Sensor_Status = false;
-          printf("[CONSOLE] Movement Detected\r\n");
+          
+          if(VBUS_Flag==true)
+            printf("[CONSOLE] Movement Detected\r\n");
         }
 
         /*
@@ -294,6 +363,7 @@ void Sleep_Mode_Init()
         SET_DTR(HIGH);
         do_once_flag = true;
         GPS_USART0_Buffer[0]=0;         //clear buffer
+        PORTC.OUTSET=PIN6_bm;
         set_sleep_mode(SLEEP_MODE_PWR_DOWN);
         sleep_mode();
       }
@@ -332,8 +402,10 @@ void GPS_Coordonates_Send()
                                    DecimalDegrees_and_Minutes.Lng_Dir_DecMin);
         }
         /* For Debugging reasons, we print out the GPS counter*/
-        printf("[CONSOLE] GPS COUNT: %d\n\r",--Get_GPS_Cnt);
+        if(VBUS_Flag==true)
+            printf("[CONSOLE] GPS COUNT: %d\n\r",--Get_GPS_Cnt);
     }
+    
 }
 
 int parse_comma_delimited_str(char* string, char** fields, int max_fields)
@@ -368,7 +440,8 @@ char * NMEA_Parse(char *NMEA_Sentence,char *output)
     else
         {
             snprintf(output, OUTPUT_BUFFER_SIZE, "Invalid\n");
-            printf("[CONSOLE] INVALID\n\r");
+            if(VBUS_Flag==true)
+                 printf("[CONSOLE] INVALID\n\r");
         }
 
     return output;

@@ -9,9 +9,9 @@
                      projectFiles="true">
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <itemPath>mcc_generated_files/i2c_host/twi0.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
+          <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
           <logicalFolder name="utils" displayName="utils" projectFiles="true">
@@ -19,33 +19,35 @@
               <itemPath>mcc_generated_files/system/utils/assembler/iar.h</itemPath>
               <itemPath>mcc_generated_files/system/utils/assembler/gas.h</itemPath>
             </logicalFolder>
+            <itemPath>mcc_generated_files/system/utils/compiler.h</itemPath>
             <itemPath>mcc_generated_files/system/utils/assembler.h</itemPath>
+            <itemPath>mcc_generated_files/system/utils/interrupt_avr8.h</itemPath>
             <itemPath>mcc_generated_files/system/utils/atomic.h</itemPath>
             <itemPath>mcc_generated_files/system/utils/utils.h</itemPath>
-            <itemPath>mcc_generated_files/system/utils/interrupt_avr8.h</itemPath>
             <itemPath>mcc_generated_files/system/utils/utils_assert.h</itemPath>
-            <itemPath>mcc_generated_files/system/utils/compiler.h</itemPath>
           </logicalFolder>
-          <itemPath>mcc_generated_files/system/pins.h</itemPath>
           <itemPath>mcc_generated_files/system/ccp.h</itemPath>
-          <itemPath>mcc_generated_files/system/clock.h</itemPath>
-          <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
-          <itemPath>mcc_generated_files/system/port.h</itemPath>
-          <itemPath>mcc_generated_files/system/system.h</itemPath>
           <itemPath>mcc_generated_files/system/protected_io.h</itemPath>
+          <itemPath>mcc_generated_files/system/system.h</itemPath>
+          <itemPath>mcc_generated_files/system/port.h</itemPath>
+          <itemPath>mcc_generated_files/system/clock.h</itemPath>
+          <itemPath>mcc_generated_files/system/config_bits.h</itemPath>
+          <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
+          <itemPath>mcc_generated_files/system/pins.h</itemPath>
         </logicalFolder>
         <logicalFolder name="timer" displayName="timer" projectFiles="true">
-          <itemPath>mcc_generated_files/timer/rtc.h</itemPath>
           <itemPath>mcc_generated_files/timer/delay.h</itemPath>
+          <itemPath>mcc_generated_files/timer/rtc.h</itemPath>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
-          <itemPath>mcc_generated_files/uart/uart_drv_interface.h</itemPath>
           <itemPath>mcc_generated_files/uart/usart0.h</itemPath>
           <itemPath>mcc_generated_files/uart/usart1.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_drv_interface.h</itemPath>
           <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>headers/BMI160_INIT.h</itemPath>
+      <itemPath>headers/i2c.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -67,12 +69,12 @@
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
             <itemPath>mcc_generated_files/system/src/clock.c</itemPath>
-            <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
-            <itemPath>mcc_generated_files/system/src/system.c</itemPath>
             <itemPath>mcc_generated_files/system/src/protected_io.S</itemPath>
             <itemPath>mcc_generated_files/system/src/interrupt.c</itemPath>
+            <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
+            <itemPath>mcc_generated_files/system/src/system.c</itemPath>
+            <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="timer" displayName="timer" projectFiles="true">
@@ -83,8 +85,8 @@
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/uart/src/usart0.c</itemPath>
             <itemPath>mcc_generated_files/uart/src/usart1.c</itemPath>
+            <itemPath>mcc_generated_files/uart/src/usart0.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
@@ -96,11 +98,11 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>gps_tracker_p.mc3</itemPath>
+      <itemPath>gps_tracker_rev.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>NMEAParser</Elem>
+    <Elem>src</Elem>
     <Elem>headers</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
@@ -112,8 +114,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
-        <languageToolchain>AVR</languageToolchain>
-        <languageToolchainVersion>7.3.0</languageToolchainVersion>
+        <languageToolchain>XC8</languageToolchain>
+        <languageToolchainVersion>2.32</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -146,106 +148,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <AVR-AR>
-        <property key="archiver-flags" value="-r"/>
-      </AVR-AR>
-      <AVR-AS>
-        <property key="announce-version" value="false"/>
-        <property key="include-paths" value=""/>
-        <property key="suppress-warnings" value="false"/>
-      </AVR-AS>
-      <AVR-AS-PRE>
-        <property key="announce-version" value="false"/>
-        <property key="include-paths" value=""/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="preprocessor-macros-undefined" value=""/>
-        <property key="suppress-warnings" value="false"/>
-      </AVR-AS-PRE>
-      <AVR-CPP>
-        <property key="additional-warnings" value="true"/>
-        <property key="call-prologues" value="false"/>
-        <property key="default-bitfield-type" value="true"/>
-        <property key="default-char-type" value="true"/>
-        <property key="extra-include-directories" value=""/>
-        <property key="garbage-collect-data" value="true"/>
-        <property key="garbage-collect-functions" value="true"/>
-        <property key="inhibit-all" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
-        <property key="no-interrupts" value="false"/>
-        <property key="no-system-directories" value="false"/>
-        <property key="optimization-level" value="-O1"/>
-        <property key="pack-struct" value="true"/>
-        <property key="preprocess-only" value="false"/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="preprocessor-macros-undefined" value=""/>
-        <property key="save-temps" value="false"/>
-        <property key="short-calls" value="false"/>
-        <property key="short-enums" value="true"/>
-        <property key="strict-ansi" value="false"/>
-        <property key="strict-ansi-errors" value="false"/>
-        <property key="support-ansi" value="false"/>
-        <property key="syntax-only" value="false"/>
-        <property key="undefined-identifier" value="false"/>
-        <property key="verbose" value="false"/>
-      </AVR-CPP>
-      <AVR-GCC>
-        <property key="additional-warnings" value="true"/>
-        <property key="call-prologues" value="false"/>
-        <property key="default-bitfield-type" value="true"/>
-        <property key="default-char-type" value="true"/>
-        <property key="extra-include-directories" value=""/>
-        <property key="extra-warnings" value="false"/>
-        <property key="garbage-collect-data" value="true"/>
-        <property key="garbage-collect-functions" value="true"/>
-        <property key="inhibit-all" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
-        <property key="no-interrupts" value="false"/>
-        <property key="no-system-directories" value="false"/>
-        <property key="optimization-level" value="-O1"/>
-        <property key="pack-struct" value="true"/>
-        <property key="preprocessor-macros" value=""/>
-        <property key="preprocessor-macros-undefined" value=""/>
-        <property key="save-temps" value="false"/>
-        <property key="short-calls" value="false"/>
-        <property key="short-enums" value="true"/>
-        <property key="strict-ansi" value="false"/>
-        <property key="strict-ansi-errors" value="false"/>
-        <property key="support-ansi" value="false"/>
-        <property key="syntax-only" value="false"/>
-        <property key="undefined-identifier" value="false"/>
-        <property key="verbose" value="false"/>
-      </AVR-GCC>
-      <AVR-Global>
-        <property key="common-include-directories" value=""/>
-        <property key="eep" value="false"/>
-        <property key="external-ram-check" value="false"/>
-        <property key="hex" value="true"/>
-        <property key="lss" value="false"/>
-        <property key="omit-pack-options" value="false"/>
-        <property key="relax-branches" value="false"/>
-        <property key="srec" value="false"/>
-        <property key="user-pack-device-support" value=""/>
-        <property key="user-pack-include" value=""/>
-        <property key="usersig" value="false"/>
-      </AVR-Global>
-      <AVR-LD>
-        <property key="eeprom-segment" value=""/>
-        <property key="exclude-standard-libraries" value="false"/>
-        <property key="extra-lib-directories" value=""/>
-        <property key="flash-segment" value=""/>
-        <property key="generate-map-file" value="true"/>
-        <property key="initial-stack-address" value=""/>
-        <property key="input-libraries" value="libm"/>
-        <property key="no-default-libs" value="false"/>
-        <property key="no-shared-libraries" value="false"/>
-        <property key="no-startup-files" value="false"/>
-        <property key="omit-symbol-information" value="false"/>
-        <property key="other-options" value=""/>
-        <property key="remove-unused-sections" value="true"/>
-        <property key="rodata-writable" value="false"/>
-        <property key="sram-segment" value=""/>
-        <property key="v-printf" value="false"/>
-      </AVR-LD>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
         <property key="asmlist" value="true"/>
@@ -263,7 +165,7 @@
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
         <property key="optimization-assembler" value="true"/>
-        <property key="optimization-assembler-files" value="true"/>
+        <property key="optimization-assembler-files" value="false"/>
         <property key="optimization-debug" value="false"/>
         <property key="optimization-invariant-enable" value="false"/>
         <property key="optimization-invariant-value" value="16"/>
@@ -330,7 +232,7 @@
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="updi"/>
-        <property key="communication.speed" value="0.500"/>
+        <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
@@ -354,6 +256,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/m68150/OneDrive - Microchip Technology Inc/Desktop/Projects/gps_tracker_rev.X/debug/default/gps_tracker_rev_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -393,10 +297,10 @@
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="updi"/>
-        <property key="communication.speed" value="0.500"/>
+        <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="true"/>
         <property key="firmware.path"
                   value="Press to browse for a specific firmware version"/>
         <property key="firmware.toolpack"

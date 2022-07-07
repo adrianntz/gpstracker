@@ -42,7 +42,7 @@ int8_t RTC_Initialize(void)
     while (RTC.STATUS > 0) { /* Wait for all register to be synchronized */
     }
     //Compare 
-    RTC.CMP = 0xEFFF;
+    RTC.CMP = 0x7FF;
 
     //Count
     RTC.CNT = 0x0;

@@ -350,11 +350,7 @@ void USART1_Write(uint8_t txData)
 {
     uint8_t tempTxHead;
     
-    if(0 == (USART1.CTRLA & USART_DREIE_bm))
-    {
-        USART1.TXDATAL = txData;
-    }
-    else if(usart1TxBufferRemaining) // check if at least one byte place is available in TX buffer
+    if(usart1TxBufferRemaining) // check if at least one byte place is available in TX buffer
     {
        tempTxHead = (usart1TxHead + 1) & USART1_TX_BUFFER_MASK;// Buffer size of TX should be in the 2^n
        
