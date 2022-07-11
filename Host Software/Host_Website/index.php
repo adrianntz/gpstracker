@@ -64,7 +64,7 @@ body {
         
         var Marker={
             coords:php_location,
-            content:  'Time when tracked: <?php echo $location['date']; ?> '
+            content: ' <p> Time when tracked: <?php echo $location['date']; ?> </p> <p> Lat: <?php echo $location['lat']; ?> </p> <p> Lng: <?php echo $location['lng']; ?> </p> '
         }
         addMarker(Marker);
         
