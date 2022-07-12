@@ -1,8 +1,8 @@
 <?php 
-define('DB_HOST', 'localhost'); 
-define('DB_USERNAME', 'id18817195_gps'); 
-define('DB_PASSWORD', 'I?HkF]n1^fD][Ysx'); 
-define('DB_NAME', 'id18817195_gps_db');
+define('DB_HOST', 'localhost:3306'); 
+define('DB_USERNAME', 'root'); 
+define('DB_PASSWORD', '123456'); 
+define('DB_NAME', 'gps_coordinates');
 
 date_default_timezone_set('Europe/Bucharest');
 

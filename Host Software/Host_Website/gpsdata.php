@@ -5,7 +5,7 @@ require 'config.php';
 function ConvDecimalMinutestoDecimalDdegrees_lat($lat) 
 {
   $latDegrees=substr($lat,0,2);
-  $latMinute=substr($lat,2,4);
+  $latMinute=substr($lat,2,6);
   $latDD=$latDegrees+$latMinute/60;
   return $latDD;
 }
@@ -13,7 +13,7 @@ function ConvDecimalMinutestoDecimalDdegrees_lat($lat)
 function ConvDecimalMinutestoDecimalDdegrees_lng($lng) 
 {
   $lngDegrees=substr($lng,0,3);
-  $lngMinute=substr($lng,3,4);
+  $lngMinute=substr($lng,3,7);
   $lngDD=$lngDegrees+$lngMinute/60;
   return $lngDD;
 }
