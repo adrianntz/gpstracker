@@ -56,7 +56,7 @@ enum {
 };
 
 void I2C_0_Init(void) {
-  /* Select default I2C pins PA2/PA3 */
+  /* Select Default I2C pins PA2/PA3 */
   PORTMUX.TWIROUTEA = 0x00;
 
   /* Host Baud Rate Control */

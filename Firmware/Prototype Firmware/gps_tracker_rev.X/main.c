@@ -64,7 +64,7 @@
 #define LOW 0
 #define GET_GPS 0xA
 #define SLEEP 0xB
-#define VBUS (PORTD.IN & PIN2_bm)
+#define VBUS (PORTC.IN & PIN7_bm)
 
 //GLOBAL VARIABLES
 
@@ -101,19 +101,29 @@ uint8_t                    Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
 volatile struct DecimalCoordinates Coordinates;
 void SET_DTR(bool setting) //Function to set DTR pin HIGH or LOW 
 {
-  if (setting == 1)
-    PORTC.OUTSET= PIN5_bm; //SET DTR HIGH
-  if (setting == 0)
-    PORTC.OUTCLR=PIN5_bm; //SET DTR LOW
+  if (setting == true)
+    PORTD.OUTSET= PIN5_bm; //SET DTR HIGH
+  if (setting == false)
+    PORTD.OUTCLR=PIN5_bm; //SET DTR LOW
 }
 
 void SET_PWKEY(bool setting) //Function to set PWKEY pin HIGH or LOW 
 {
-  if (setting == 1)
-    PORTC.OUTSET= PIN4_bm; //SET PWKEY HIGH
-  if (setting == 0)
-    PORTC.OUTCLR=PIN4_bm; //SET PWKEY LOW
+  if (setting == true)
+    PORTD.OUTSET= PIN4_bm; //SET PWKEY HIGH
+  if (setting == false)
+    PORTD.OUTCLR=PIN4_bm; //SET PWKEY LOW
 }
+
+void SET_RST(bool setting) //Function to set RST pin HIGH or LOW 
+{
+  if (setting == true)
+    PORTD.OUTSET= PIN3_bm; //SET RST HIGH
+  if (setting == false)
+    PORTD.OUTCLR=PIN3_bm; //SET RST LOW
+}
+
+
 
 
 void USART0_Print(const char* string)
@@ -183,12 +193,9 @@ void VBUS_Check()
     if(VBUS_Flag==true)
         {
         
-            //USART1_Initialize();
-            // USART1_Enable();
-            // USART1.STATUS|= (USART_BDF_bm|USART_ISFIF_bm|USART_RXSIF_bm|USART_TXCIF_bm|USART_DREIF_bm);
-            // USART1.RXDATAH|=( (1<<1) | (1<<2) );
-            //USART1.CTRLA|= USART_DREIE_bm;
-            PORTC.OUTCLR=PIN6_bm;
+            
+            USART1_Enable();
+            PORTC.DIR|=PIN0_bm;//Apparently, disabling USART modules also reset the PIN's output status. We have to reset it.
             if(USART_Control_Print_once==false)
             {
                 printf("[CONSOLE] USART1 Enabled\r\n");
@@ -204,11 +211,9 @@ void VBUS_Check()
                 USART_Control_Print_once=true;
             }
           
-            //DELAY_milliseconds(1000); 
-            //USART1_Deinitialize();    
-            //USART1_Disable();
-            PORTC.OUTCLR=PIN0_bm;// force USART1 TX Pin LOW
-            PORTC.OUTSET=PIN6_bm;
+            DELAY_milliseconds(100);   
+            USART1_Disable();
+            
         }
 }
 
@@ -228,7 +233,7 @@ int main(void)
     BMI_160_INIT();
     RTC_SetOVFIsrCallback(GPS_ACQUIRE_TIMESTAMP);
     PD6_SetInterruptHandler(Motion_Detected);
-    PD2_SetInterruptHandler(VBUS_Detect);
+    PC7_SetInterruptHandler(VBUS_Detect);
     USART0_RxCompleteCallbackRegister(SIM808_RECIEVE);
     USART1_RxCompleteCallbackRegister(CDC_TX);
     TWI0_Deinitialize();
@@ -237,7 +242,7 @@ int main(void)
     printf("[CONSOLE] Module Initialized\r\n");
     
                               
-    if(VBUS==PIN2_bm)        //We check for the first time when the device turns on 
+    if(VBUS==PIN7_bm)        //We check for the first time when the device turns on 
         VBUS_Flag=true;      //if the USB is plugged in or not. After that, everytime there is a change
     else                    //(rising or falling) on the VBUS connected pin, we change the state
         VBUS_Flag=false;

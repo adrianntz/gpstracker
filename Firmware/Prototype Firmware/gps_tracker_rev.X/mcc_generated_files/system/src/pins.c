@@ -40,6 +40,7 @@ static void (*PA1_InterruptHandler)(void);
 static void (*PA0_InterruptHandler)(void);
 static void (*PC3_InterruptHandler)(void);
 static void (*PC2_InterruptHandler)(void);
+static void (*PC7_InterruptHandler)(void);
 static void (*PD2_InterruptHandler)(void);
 static void (*PD6_InterruptHandler)(void);
 static void (*PC6_InterruptHandler)(void);
@@ -86,7 +87,7 @@ void PIN_MANAGER_Initialize()
     PORTC.PIN4CTRL = 0x0;
     PORTC.PIN5CTRL = 0x0;
     PORTC.PIN6CTRL = 0x0;
-    PORTC.PIN7CTRL = 0x0;
+    PORTC.PIN7CTRL = 0x9;
     PORTD.PIN0CTRL = 0x0;
     PORTD.PIN1CTRL = 0x0;
     PORTD.PIN2CTRL = 0x1;
@@ -132,6 +133,7 @@ void PIN_MANAGER_Initialize()
     PA0_SetInterruptHandler(PA0_DefaultInterruptHandler);
     PC3_SetInterruptHandler(PC3_DefaultInterruptHandler);
     PC2_SetInterruptHandler(PC2_DefaultInterruptHandler);
+    PC7_SetInterruptHandler(PC7_DefaultInterruptHandler);
     PD2_SetInterruptHandler(PD2_DefaultInterruptHandler);
     PD6_SetInterruptHandler(PD6_DefaultInterruptHandler);
     PC6_SetInterruptHandler(PC6_DefaultInterruptHandler);
@@ -216,6 +218,19 @@ void PC2_DefaultInterruptHandler(void)
     // or set custom function using PC2_SetInterruptHandler()
 }
 /**
+  Allows selecting an interrupt handler for PC7 at application runtime
+*/
+void PC7_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    PC7_InterruptHandler = interruptHandler;
+}
+
+void PC7_DefaultInterruptHandler(void)
+{
+    // add your PC7 interrupt custom code
+    // or set custom function using PC7_SetInterruptHandler()
+}
+/**
   Allows selecting an interrupt handler for PD2 at application runtime
 */
 void PD2_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -293,6 +308,10 @@ ISR(PORTC_PORT_vect)
     if(VPORTC.INTFLAGS & PORT_INT2_bm)
     {
        PC2_InterruptHandler(); 
+    }
+    if(VPORTC.INTFLAGS & PORT_INT7_bm)
+    {
+       PC7_InterruptHandler(); 
     }
     if(VPORTC.INTFLAGS & PORT_INT6_bm)
     {

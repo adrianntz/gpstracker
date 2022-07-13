@@ -146,6 +146,24 @@
 #define IO_PC2_DisableDigitalInputBuffer() do { PORTC.PIN2CTRL = (PORTC.PIN2CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
 #define IO_PC2_EnableInterruptForLowLevelSensing() do { PORTC.PIN2CTRL = (PORTC.PIN2CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 
+//get/set IO_PC7 aliases
+#define IO_PC7_SetHigh() do { PORTC_OUTSET = 0x80; } while(0)
+#define IO_PC7_SetLow() do { PORTC_OUTCLR = 0x80; } while(0)
+#define IO_PC7_Toggle() do { PORTC_OUTTGL = 0x80; } while(0)
+#define IO_PC7_GetValue() (VPORTC.IN & (0x1 << 7))
+#define IO_PC7_SetDigitalInput() do { PORTC_DIRCLR = 0x80; } while(0)
+#define IO_PC7_SetDigitalOutput() do { PORTC_DIRSET = 0x80; } while(0)
+#define IO_PC7_SetPullUp() do { PORTC_PIN7CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define IO_PC7_ResetPullUp() do { PORTC_PIN7CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define IO_PC7_SetInverted() do { PORTC_PIN7CTRL  |= PORT_INVEN_bm; } while(0)
+#define IO_PC7_ResetInverted() do { PORTC_PIN7CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define IO_PC7_DisableInterruptOnChange() do { PORTC.PIN7CTRL = (PORTC.PIN7CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define IO_PC7_EnableInterruptForBothEdges() do { PORTC.PIN7CTRL = (PORTC.PIN7CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define IO_PC7_EnableInterruptForRisingEdge() do { PORTC.PIN7CTRL = (PORTC.PIN7CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define IO_PC7_EnableInterruptForFallingEdge() do { PORTC.PIN7CTRL = (PORTC.PIN7CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define IO_PC7_DisableDigitalInputBuffer() do { PORTC.PIN7CTRL = (PORTC.PIN7CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define IO_PC7_EnableInterruptForLowLevelSensing() do { PORTC.PIN7CTRL = (PORTC.PIN7CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+
 //get/set IO_PD2 aliases
 #define IO_PD2_SetHigh() do { PORTD_OUTSET = 0x4; } while(0)
 #define IO_PD2_SetLow() do { PORTD_OUTCLR = 0x4; } while(0)
@@ -333,6 +351,27 @@ void PC2_DefaultInterruptHandler(void);
  * @return none
  */
 void PC2_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Default Interrupt Handler for PC7 pin. 
+ *        This is a predefined interrupt handler to be used together with the PC7_SetInterruptHandler() method.
+ *        This handler is called every time the PC7 ISR is executed. 
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param none
+ * @return none
+ */
+void PC7_DefaultInterruptHandler(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt Handler Setter for PC7 pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for PC7 at application runtime
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param InterruptHandler function pointer.
+ * @return none
+ */
+void PC7_SetInterruptHandler(void (* interruptHandler)(void)) ; 
 
 /**
  * @ingroup  pinsdriver

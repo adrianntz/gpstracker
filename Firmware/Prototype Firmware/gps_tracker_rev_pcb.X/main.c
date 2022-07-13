@@ -192,12 +192,8 @@ void VBUS_Check()
     if(VBUS_Flag==true)
         {
         
-            //USART1_Initialize();
-            // USART1_Enable();
-            // USART1.STATUS|= (USART_BDF_bm|USART_ISFIF_bm|USART_RXSIF_bm|USART_TXCIF_bm|USART_DREIF_bm);
-            // USART1.RXDATAH|=( (1<<1) | (1<<2) );
-            //USART1.CTRLA|= USART_DREIE_bm;
-            PORTC.OUTCLR=PIN6_bm;
+            USART1_Enable();
+            PORTC.DIR|=PIN0_bm;//Apparently, disabling USART modules also reset the PIN's output status. We have to reset it.
             if(USART_Control_Print_once==false)
             {
                 printf("[CONSOLE] USART1 Enabled\r\n");
@@ -213,11 +209,8 @@ void VBUS_Check()
                 USART_Control_Print_once=true;
             }
           
-            //DELAY_milliseconds(1000); 
-            //USART1_Deinitialize();    
-            //USART1_Disable();
-            PORTC.OUTCLR=PIN0_bm;// force USART1 TX Pin LOW
-            PORTC.OUTSET=PIN6_bm;
+             DELAY_milliseconds(100);   
+             USART1_Disable();
         }
 }
 
@@ -274,13 +267,13 @@ int main(void)
 
             case SLEEP:          
                 
-                
+                PORTC.OUTSET=PIN6_bm;
                 Sleep_Mode_Init();
                 break;
 
             default:        
                 
-              //  PORTC.OUTSET=PIN6_bm;
+                PORTC.OUTSET=PIN6_bm;
                 Sleep_Mode_Init();
                 break;
         }
