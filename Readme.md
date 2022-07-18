@@ -1,5 +1,6 @@
 ﻿
 
+
 # Power Efficient GPS Tracker
 
 ![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Microchip_logo.svg/2560px-Microchip_logo.svg.png)
@@ -38,6 +39,9 @@ The user can access the Debugging interface by connecting the micro-USB port at 
 ## Software Application Notes
 The GPS Tracker should be used together with its Web Application.![enter image description here](https://i.ibb.co/PtLpG2C/chrome-PXRp-KR6-M88.png)
 This is the main website that come together  with the Hardware Module. Scrolling down will reveal a description of the app. By clicking on the "Visualize on Google Maps", the user will be redirected to the GPS Tracker's GPS coordinates being rendered on a live map, which is updated real-time.
+By clicking the Object Tracking switch, we can either follow the tracker as it is uploading new markers, or let the map display new markers without interrupting our movement.
+
+![enter image description here](https://i.ibb.co/zxS64Fg/chrome-g-TD5-Jp-QXg-T.png)
 ![enter image description here](https://i.ibb.co/HVSjD8G/chrome-i-QXM0a-Tv-XF.png)By clicking on a certain marker, it's information will be displayed for the user:
 ![enter image description here](https://i.ibb.co/Mfm04rn/chrome-5-ICZ2-XO1-Jy.png)
 

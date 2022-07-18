@@ -18,7 +18,7 @@
 		
     </head>
 <body>
-
+  
 <style>
   body {
     font-family: Arial;
@@ -29,9 +29,36 @@
     max-width: 100vw;
     min-height: 91vh;
   }
+
+  .custom-control-input::content {
+    color:white;
+  }
+    .custom-control-input:focus~.custom-control-label::before {
+    border-color: red !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 47, 69, 0.25) !important;
+  }
+
+  .custom-control-input:checked~.custom-control-label::before {
+    border-color: red !important;
+    background-color: red !important;
+  }
+
+  .custom-control-input:active~.custom-control-label::before {
+    background-color: red !important;
+    border-color: red !important;
+  }
+
+  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+    border-color: red !important;
+  }
+
+  .custom-control-input-green:not(:disabled):active~.custom-control-label::before {
+    background-color: red !important;
+    border-color: red !important;
+  }
   </style>
 
-<body style="background-color:black">
+<body style="background-color:rgb(245, 245, 245)">
 <div id="map-layer"></div>
 
 <script
@@ -41,14 +68,20 @@
 <script>
 var data = Array(); // data is empty
 var gps_data;
-var gps_data_length=0;
+var gps_database_length=0;
 var last_location;
 var init_map_once=0;
 var map;
 var markers=Array();
 var gps_path_coordinates=Array();
+var markers_deleted=0;
+var Is_Tracking_Checked=0;
 
-setInterval(function(){
+const  markers_limit_no=30;
+
+
+setInterval(function()
+{
 $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
   gps_data=JSON.parse(data);
   last_location = new google.maps.LatLng(gps_data[gps_data.length-1].lat, gps_data[gps_data.length-1].lng); 
@@ -56,39 +89,74 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
  // document.getElementById("demo").innerHTML = str;
   if(init_map_once==0)
   {
-    gps_data_length=gps_data.length;
+    gps_database_length=gps_data.length;
     initMap(last_location,gps_data);
     init_map_once=1;
   }
-
-  if(gps_data_length!=gps_data.length)
+  
+  if(markers.length/2 > markers_limit_no)
   {
-    gps_data_length=gps_data.length;
+    remove_oldest_marker(markers.length/2-markers_limit_no);
+    gps_data=gps_data.slice(markers.length/2-markers_limit_no);
+  }
+
+  if(gps_database_length!=gps_data.length)
+  {
+    gps_database_length=gps_data.length;
     gps_path_coordinates.push(last_location);
-    gps_path=new google.maps.Polyline({
-        path : gps_path_coordinates,
-        geodesic : true,
-        strokeColor : '#FF0000',
-        strokeOpacity : 0.6,
-        strokeWeight : 6,
-        map : map
-		});
-        gps_path.setMap(map);    
+    deletePath();
+    redrawPath();  
+        
     var Marker={
           coords:last_location,
           content: ' <p> Time when tracked:'+ gps_data[gps_data.length-1].date + '</p> <p> Lat:'+ gps_data[gps_data.length-1].lat.toString() + ' </p> <p> Lng:'+ gps_data[gps_data.length-1].lng.toString() +' </p> '
         }
         addMarker(Marker);
+        markers.push(Marker);
 
   }
   
   
 
 });
-}, 3000);
 
+}, 100);
 
-    
+    function remove_oldest_marker(limit) 
+    {
+      for(let i=0; i<2*limit;i++)
+      {
+        if(i % 2 == 0) //only half of the marker objects stored in the markers[] array have the setMap() function
+        {
+         markers[i].setMap(null);
+        }
+      }
+      markers=markers.slice(2*limit);
+      gps_path_coordinates=gps_path_coordinates.slice(limit);
+      deletePath();
+      gps_path.length=0; //clear the polyline array 
+      redrawPath();
+      
+    }
+
+    function redrawPath()
+    {
+      gps_path=new google.maps.Polyline({ //recreate it with the new coordinates
+          path : gps_path_coordinates,
+          geodesic : true,
+          strokeColor : '#FF0000',
+          strokeOpacity : 0.6,
+          strokeWeight : 6,
+          map : map
+		});
+        gps_path.setMap(map);
+    }
+
+    function deletePath()
+    {
+      gps_path.setMap(null);
+    }
+
     function initMap(last_location,gps_data) 
     {
       
@@ -98,7 +166,7 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
         map = new google.maps.Map(mapLayer, defaultOptions);
         
 
-        for (let i=0;i<gps_data_length;i++)
+        for (let i=0;i<gps_database_length;i++)
         {
         var php_location = new google.maps.LatLng(gps_data[i].lat,gps_data[i].lng);
         gps_path_coordinates.push(php_location);
@@ -108,6 +176,7 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
        
         }
         addMarker(Marker);
+        markers.push(Marker);
         }
         
         
@@ -118,18 +187,7 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
             map: map
         }); 
         */
-      
-         
-      
-      gps_path=new google.maps.Polyline({
-        path : gps_path_coordinates,
-        geodesic : true,
-        strokeColor : '#FF0000',
-        strokeOpacity : 0.6,
-        strokeWeight : 6,
-        map : map
-		});
-        gps_path.setMap(map);
+        redrawPath();
     }
     
     
@@ -141,7 +199,11 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
           //icon:props.iconImage
         });
 		 markers.push(marker);
-		 map.setCenter(marker.getPosition());
+     if(Is_Tracking_Checked==1)
+     {
+      map.setCenter(marker.getPosition());
+     }
+		 
         // Check for customicon
         if(props.iconImage){
           // Set icon image
@@ -183,12 +245,27 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
 <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                         <a class="btn btn-danger" href="http://localhost/index.html">Back  </a>
+                         <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                          <label class="custom-control-label" for="customSwitch1">Toggle Object Tracking </label>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
+  <script>
+
+    document.getElementById('customSwitch1').onchange = function(e){
+
+    if(e.target.checked) {
+      Is_Tracking_Checked=1;
+    } else 
+    {
+      Is_Tracking_Checked=0;
+    }
+    };
+
+  </script>
 
  <!-- Required meta tags -->
  <meta charset="utf-8">
