@@ -2,12 +2,22 @@
 #include <avr/io.h>
 #include "../../gps_tracker_rev.X/headers/i2c.h"
 #include "../mcc_generated_files/timer/delay.h"
-#include "../mcc_generated_files/i2c_host/twi0.h"
 
 #define READ_BYTE 0x01
 #define BMI_ADDRESS 0x68
+#define LIS331_ADDRESS 0x19
 
-#define BMI160_REG_CHIP_ID 0x00
+#define LIS331_WHO_AM_I 0xF
+#define LIS331_CTRL_REG1 0x20
+#define LIS331_CTRL_REG2 0x21
+#define LIS331_CTRL_REG3 0x22
+#define LIS331_CTRL_REG4 0x23
+#define LIS331_CTRL_REG5 0x24
+#define LIS331_INT1_THS 0x32
+#define LIS331_INT1_DURATION 0x33
+#define LIS331_INT1_CFG 0x30
+
+
 #define BMI160_REG_INT_MOTION_3 0x62
 #define BMI160_REG_INT_MOTION_1 0x60
 #define BMI160_REG_INT_MOTION_0 0x5F
@@ -34,23 +44,26 @@ void I2C_0_EndSession(void) {
 
 void i2c_write(int device_address, uint8_t * reg_and_data, uint8_t size) 
 {
+  
   I2C_0_SendData((device_address << 1), reg_and_data, size);
   //TWI0_Write((device_address << 1), reg_and_data, size);
-  I2C_0_EndSession();
+  //I2C_0_EndSession(); 
 
 }
 
 void i2c_read(int device_address, uint8_t * reciev_data, uint8_t size, uint8_t reg_read) 
 {
   i2c_write(device_address, & reg_read, 1);
-  TWI0_Read((device_address << 1) + 1, reciev_data, size);
+ // TWI0_Read((device_address << 1) + 1, reciev_data, size);
   I2C_0_EndSession();
 
 }
 
-void BMI_160_INIT(void) {
-  uint8_t REGISTER_AND_DATA[2];
-
+void BMI_160_REG_SEQ()
+{
+    
+  uint8_t REGISTER_AND_DATA[2];  
+  
   REGISTER_AND_DATA[0] = BMI160_REG_CMD;//0x7e
   REGISTER_AND_DATA[1] = 0xB6; //soft reset for bmi160
   i2c_write(BMI_ADDRESS, REGISTER_AND_DATA, 2);
@@ -92,6 +105,61 @@ void BMI_160_INIT(void) {
   REGISTER_AND_DATA[0] = BMI160_REG_INT_EN_0;//0x50
   REGISTER_AND_DATA[1] = 0x07; //enable la anymo_int pt axa x,z,y
   i2c_write(BMI_ADDRESS, REGISTER_AND_DATA, 2);
+}
 
-  I2C_0_EndSession();
+
+void LIS331_REG_SEQ()
+{
+    uint8_t REGISTER_AND_DATA[2];
+    
+    REGISTER_AND_DATA[0] = LIS331_CTRL_REG1;
+    REGISTER_AND_DATA[1] = 0x2F; //Low power mode, 10Hz data rate, x,y,z enabled
+    i2c_write(LIS331_ADDRESS, REGISTER_AND_DATA, 2);
+    DELAY_milliseconds(50); // wait  to stabilize
+    
+    REGISTER_AND_DATA[0] = LIS331_CTRL_REG2; 
+    REGISTER_AND_DATA[1] = 0x00; //HIgh Pass Filter Disabled
+    i2c_write(LIS331_ADDRESS, REGISTER_AND_DATA, 2);
+    DELAY_milliseconds(10); // wait  to stabilize
+    
+    REGISTER_AND_DATA[0] = LIS331_CTRL_REG3;//0x22
+    REGISTER_AND_DATA[1] = 0x00; // Latched interrupt active high on INT1 pad
+    i2c_write(LIS331_ADDRESS, REGISTER_AND_DATA, 2);
+    DELAY_milliseconds(10); // wait  to stabilize
+    
+    REGISTER_AND_DATA[0] = LIS331_CTRL_REG4;//0x22
+    REGISTER_AND_DATA[1] = 0x00; // FS = 2 g
+    i2c_write(LIS331_ADDRESS, REGISTER_AND_DATA, 2);
+    DELAY_milliseconds(10); // wait  to stabilize
+    
+    REGISTER_AND_DATA[0] = LIS331_CTRL_REG5;//0x22
+    REGISTER_AND_DATA[1] = 0x00; // Sleep to Wake disabled
+    i2c_write(LIS331_ADDRESS, REGISTER_AND_DATA, 2);
+    DELAY_milliseconds(10); // wait  to stabilize
+    
+    REGISTER_AND_DATA[0] = LIS331_INT1_THS;//0x22
+    REGISTER_AND_DATA[1] = 0x20;  // Threshold = 500 mg
+    i2c_write(LIS331_ADDRESS, REGISTER_AND_DATA, 2);
+    DELAY_milliseconds(10); // wait to stabilize
+    
+    REGISTER_AND_DATA[0] = LIS331_INT1_DURATION;//0x22
+    REGISTER_AND_DATA[1] = 0x00; // Duration = 0
+    i2c_write(LIS331_ADDRESS, REGISTER_AND_DATA, 2);
+    DELAY_milliseconds(10); // wait  to stabilize
+    
+    REGISTER_AND_DATA[0] = LIS331_INT1_CFG;//0x22
+    REGISTER_AND_DATA[1] = 0x0A; // Enable XH and YH interrupt generation
+    i2c_write(LIS331_ADDRESS, REGISTER_AND_DATA, 2);
+    DELAY_milliseconds(10); // wait  to stabilize
+    
+   
+    
+}
+void BMI_160_INIT(void) 
+{
+  I2C_0_Init();
+  LIS331_REG_SEQ();
+
+  //BMI_160_REG_SEQ();
+  
 }

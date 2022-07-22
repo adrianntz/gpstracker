@@ -38,6 +38,7 @@ void    I2C_0_Init(void);
 int     I2C_0_SendData(uint8_t address, uint8_t *pData, uint8_t len); // returns how many bytes have been sent, -1 means NACK at address
 int     I2C_0_GetData(uint8_t address, uint8_t *pData, uint8_t len); // returns how many bytes have been received, -1 means NACK at address
 void    I2C_0_EndSession(void);
+void    I2C_0_Disable(void);
 
 #ifdef	__cplusplus
 }

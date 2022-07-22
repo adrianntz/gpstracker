@@ -36,6 +36,7 @@
 #include <math.h>
 #include "mcc_generated_files/system/system.h"
 #include "headers/BMI160_INIT.h"
+#include "headers/i2c.h"
 #include "avr/sleep.h"
 /*
     Main application
@@ -58,7 +59,7 @@
 
 #define OUTPUT_BUFFER_SIZE 100
 #define NMEA_NO_OF_FIELDS 12
-#define GPS_NUMBER_OF_TRANSMISSIONS 5
+#define GPS_NUMBER_OF_TRANSMISSIONS 30
 //SYSTEM STATES DEFINITIONS 
 #define HIGH 1
 #define LOW 0
@@ -85,7 +86,8 @@ volatile bool           Delay_Flag = false,
                         USART_Control_Print_once=false,
                         VBUS_Change_Flag=true;
 
-bool                        do_once_flag = false;
+bool                        do_once_flag = false,
+                            charge_do_once=false;
 volatile uint8_t        Timer_Cnt= 0;
 uint8_t                    receiveData;
 uint8_t                    Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
@@ -99,6 +101,125 @@ uint8_t                    Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
 }DecimalDegrees_and_Minutes;
 
 volatile struct DecimalCoordinates Coordinates;
+
+void Led_Blink();
+void SET_DTR(bool setting);
+void SET_PWKEY(bool setting);
+void SET_RST(bool setting);
+void USART0_Print(const char* string);
+void SIM808_RECIEVE();
+void Motion_Detected();
+void GPS_ACQUIRE_TIMESTAMP();
+void CDC_TX();
+void VBUS_Detect();
+void VBUS_Check();
+char * NMEA_Parse(char *NMEA_Sentence,char *output);
+int parse_comma_delimited_str(char* string, char** fields, int max_fields);
+void send_sms_message_AT(char * msg) ;
+void Sleep_Mode_Init();
+void GPS_Coordonates_Send();
+void send_lat_and_long_gprs(char lat_param[],
+                            char lat_dir_param[], 
+                            char lng_param[],
+                            char lng_dir_param[]);
+
+int main(void)
+{
+    SYSTEM_Initialize();
+    BMI_160_INIT();
+    RTC_SetOVFIsrCallback(GPS_ACQUIRE_TIMESTAMP);
+    TCA0_OverflowCallbackRegister(Led_Blink);
+    PD6_SetInterruptHandler(Motion_Detected);
+    PD2_SetInterruptHandler(VBUS_Detect);
+    USART0_RxCompleteCallbackRegister(SIM808_RECIEVE);
+    USART1_RxCompleteCallbackRegister(CDC_TX);
+    I2C_0_Disable();
+    SET_RST(true);
+    SET_DTR(false);
+    SET_PWKEY(true);
+    TCA0.SINGLE.CTRLA &= ~0x1; //shut off TCA0
+    
+    
+    
+    uint8_t STATE = SLEEP;
+    
+    printf("[CONSOLE] Module Initialized\r\n");
+    
+                              
+    if(VBUS==PIN2_bm)        //We check for the first time when the device turns on 
+        VBUS_Flag=true;      //if the USB is plugged in or not. After that, everytime there is a change
+    else                    //(rising or falling) on the VBUS connected pin, we change the state
+        VBUS_Flag=false;
+    
+    
+     while (true) 
+    {
+         if(VBUS_Change_Flag==true)
+         {
+             VBUS_Check();
+             VBUS_Change_Flag=false;
+         }
+         
+         
+        switch (STATE) 
+        {
+            case GET_GPS:     
+                
+                TCA0.SINGLE.CTRLA |= 0x01; //turn on TCA0
+                TCA0.SINGLE.CNT=0; //reset counter
+                GPS_Coordonates_Send();             
+                PORTD.OUTCLR=PIN7_bm;
+                TCA0.SINGLE.CTRLA &=  ~0x01; //turn off TCA0
+                break;
+
+            case SLEEP:          
+                
+                PORTD.OUTCLR=PIN7_bm;
+                Sleep_Mode_Init();
+                break;
+
+            default:        
+                
+                PORTD.OUTCLR=PIN7_bm;
+                Sleep_Mode_Init();
+                break;
+        }
+
+        /*
+         * If the BMI160 sensor detects motion, we send GPS information 10 times, once every 30 seconds
+         * We change the functioning state to GET_GPS.
+         */
+        if (Movement_Sensor_Status == true) 
+        {
+          STATE = GET_GPS;
+          Movement_Sensor_Status = false;
+          
+          if(VBUS_Flag==true)
+            printf("[CONSOLE] Movement Detected\r\n");
+        }
+
+        /*
+         * After we send the GPS information 10 times, we initiate sleep mode, thus changing the functioning state
+         */
+        if (Get_GPS_Cnt == 0)                      
+        {
+          Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;                         //Reset the GPS counter
+          STATE=SLEEP;
+          
+          do_once_flag = false;                                              //The Sleep Commands must be used now
+        }
+       
+       
+    }
+
+  return 0;
+}
+
+void Led_Blink()
+{
+    PORTD.OUTTGL=PIN7_bm;
+}
+
 void SET_DTR(bool setting) //Function to set DTR pin HIGH or LOW 
 {
   if (setting == true)
@@ -197,6 +318,7 @@ void VBUS_Check()
             if(USART_Control_Print_once==false)
             {
                 printf("[CONSOLE] USART1 Enabled\r\n");
+                USART0_Print("AT+ECHARGE=1\r\n");
                 USART_Control_Print_once=true;
             }
             
@@ -206,105 +328,13 @@ void VBUS_Check()
             if(USART_Control_Print_once==false)
             {
                 printf("[CONSOLE] USART1 Disabled\r\n");
+                USART0_Print("AT+ECHARGE=0\r\n");
                 USART_Control_Print_once=true;
             }
           
              DELAY_milliseconds(100);   
              USART1_Disable();
         }
-}
-
-char * NMEA_Parse(char *NMEA_Sentence,char *output);
-int parse_comma_delimited_str(char* string, char** fields, int max_fields);
-void send_sms_message_AT(char * msg) ;
-void Sleep_Mode_Init();
-void GPS_Coordonates_Send();
-void send_lat_and_long_gprs(char lat_param[],
-                            char lat_dir_param[], 
-                            char lng_param[],
-                            char lng_dir_param[]);
-
-int main(void)
-{
-    SYSTEM_Initialize();
-    BMI_160_INIT();
-    RTC_SetOVFIsrCallback(GPS_ACQUIRE_TIMESTAMP);
-    PD6_SetInterruptHandler(Motion_Detected);
-    PD2_SetInterruptHandler(VBUS_Detect);
-    USART0_RxCompleteCallbackRegister(SIM808_RECIEVE);
-    USART1_RxCompleteCallbackRegister(CDC_TX);
-    TWI0_Deinitialize();
-    SET_RST(true);
-    SET_PWKEY(true);
-    
-    
-    uint8_t STATE = SLEEP;
-    
-    printf("[CONSOLE] Module Initialized\r\n");
-    
-                              
-    if(VBUS==PIN2_bm)        //We check for the first time when the device turns on 
-        VBUS_Flag=true;      //if the USB is plugged in or not. After that, everytime there is a change
-    else                    //(rising or falling) on the VBUS connected pin, we change the state
-        VBUS_Flag=false;
-    
-    
-     while (true) 
-    {
-         if(VBUS_Change_Flag==true)
-         {
-             VBUS_Check();
-             VBUS_Change_Flag=false;
-         }
-         
-        switch (STATE) 
-        {
-            case GET_GPS:     
-                
-                GPS_Coordonates_Send();             
-                PORTC.OUTCLR=PIN6_bm;
-                break;
-
-            case SLEEP:          
-                
-                PORTC.OUTSET=PIN6_bm;
-                Sleep_Mode_Init();
-                break;
-
-            default:        
-                
-                PORTC.OUTSET=PIN6_bm;
-                Sleep_Mode_Init();
-                break;
-        }
-
-        /*
-         * If the BMI160 sensor detects motion, we send GPS information 10 times, once every 30 seconds
-         * We change the functioning state to GET_GPS.
-         */
-        if (Movement_Sensor_Status == true) 
-        {
-          STATE = GET_GPS;
-          Movement_Sensor_Status = false;
-          
-          if(VBUS_Flag==true)
-            printf("[CONSOLE] Movement Detected\r\n");
-        }
-
-        /*
-         * After we send the GPS information 10 times, we initiate sleep mode, thus changing the functioning state
-         */
-        if (Get_GPS_Cnt == 0)                      
-        {
-          Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;                         //Reset the GPS counter
-          STATE = SLEEP;
-          do_once_flag = false;                     //The Sleep Commands must be used now
-        }
-       
-       
-    }
-
-  return 0;
 }
 
 /* Function to send any string through the SIM808 SMS Functionality using AT Commands*/
@@ -360,16 +390,20 @@ void Sleep_Mode_Init()
 {
      if (do_once_flag == false)                 //These commands need to be sent only once
       {
-        USART0_Print("AT+CGPSPWR=0\r\n");
-        DELAY_milliseconds(300);
-        USART0_Print("AT+CFUN=0\r\n");
-        DELAY_milliseconds(300);
-        USART0_Print("AT+CSCLK=1\r\n");
-        DELAY_milliseconds(300);
-        SET_DTR(HIGH);
+        
+         if(VBUS_Flag==false)
+         {
+            USART0_Print("AT+CGPSPWR=0\r\n");
+            DELAY_milliseconds(300);
+            USART0_Print("AT+CFUN=0\r\n");
+            DELAY_milliseconds(300);
+            USART0_Print("AT+CSCLK=1\r\n");
+            DELAY_milliseconds(300);
+            SET_DTR(HIGH);  
+         }
+             
         do_once_flag = true;
         GPS_USART0_Buffer[0]=0;         //clear buffer
-        PORTC.OUTSET=PIN6_bm;
         set_sleep_mode(SLEEP_MODE_PWR_DOWN);
         sleep_mode();
       }
@@ -409,7 +443,10 @@ void GPS_Coordonates_Send()
         }
         /* For Debugging reasons, we print out the GPS counter*/
         if(VBUS_Flag==true)
+        {
             printf("[CONSOLE] GPS COUNT: %d\n\r",--Get_GPS_Cnt);
+            
+        }
     }
     
 }

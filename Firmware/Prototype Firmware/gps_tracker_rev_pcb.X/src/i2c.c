@@ -54,10 +54,20 @@ enum {
     I2C_READY,
     I2C_ERROR
 };
-
-void I2C_0_Init(void) {
-  /* Select Default I2C pins PA2/PA3 */
-  PORTMUX.TWIROUTEA = 0x00;
+void I2C_0_Disable(void)
+{
+     TWI0.MCTRLA &= (~TWI_ENABLE_bm);
+     PORTA.DIRCLR=PIN2_bm;
+     PORTA.DIRCLR=PIN3_bm;
+     
+     
+}
+void I2C_0_Init(void) 
+{
+ 
+  PORTA.DIRSET = PIN2_bm|PIN3_bm;
+  /* Select I2C pins PA2/PA3 */
+  PORTMUX.TWIROUTEA = 0x01;
 
   /* Host Baud Rate Control */
   TWI0.MBAUD = TWI0_BAUD((I2C_SCL_FREQ), 0.3);
@@ -78,15 +88,19 @@ void I2C_0_Init(void) {
 static uint8_t i2c_0_WaitW(void) {
   uint8_t state = I2C_INIT;
   do {
-    if (TWI0.MSTATUS & (TWI_WIF_bm | TWI_RIF_bm)) {
-      if (!(TWI0.MSTATUS & TWI_RXACK_bm)) {
+    if (TWI0.MSTATUS & (TWI_WIF_bm | TWI_RIF_bm))
+    {
+      if (!(TWI0.MSTATUS & TWI_RXACK_bm))
+      {
         /* client responded with ack - TWI goes to M1 state */
         state = I2C_ACKED;
       } else {
         /* address sent but no ack received - TWI goes to M3 state */
         state = I2C_NACKED;
       }
-    } else if (TWI0.MSTATUS & (TWI_BUSERR_bm | TWI_ARBLOST_bm)) {
+    }
+    else if (TWI0.MSTATUS & (TWI_BUSERR_bm | TWI_ARBLOST_bm)) 
+    {
       /* get here only in case of bus error or arbitration lost - M4 state */
       state = I2C_ERROR;
     }
