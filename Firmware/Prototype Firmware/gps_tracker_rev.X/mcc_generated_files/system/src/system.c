@@ -44,7 +44,6 @@ void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
     PIN_MANAGER_Initialize();
-    I2C0_Host_Initialize();
     RTC_Initialize();
     USART0_Initialize();
     USART1_Initialize();

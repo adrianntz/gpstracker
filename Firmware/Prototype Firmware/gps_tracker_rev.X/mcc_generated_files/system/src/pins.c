@@ -38,17 +38,19 @@ static void (*PC1_InterruptHandler)(void);
 static void (*PC0_InterruptHandler)(void);
 static void (*PA1_InterruptHandler)(void);
 static void (*PA0_InterruptHandler)(void);
-static void (*PC3_InterruptHandler)(void);
-static void (*PC2_InterruptHandler)(void);
 static void (*PC7_InterruptHandler)(void);
 static void (*PD2_InterruptHandler)(void);
 static void (*PD6_InterruptHandler)(void);
+static void (*PA2_InterruptHandler)(void);
+static void (*PA3_InterruptHandler)(void);
+static void (*PC2_InterruptHandler)(void);
+static void (*PC3_InterruptHandler)(void);
 static void (*PC6_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
 {
   /* DIR Registers Initialization */
-    PORTA.DIR = 0x1;
+    PORTA.DIR = 0xD;
     PORTB.DIR = 0x0;
     PORTC.DIR = 0x4D;
     PORTD.DIR = 0x0;
@@ -66,8 +68,8 @@ void PIN_MANAGER_Initialize()
   /* PINxCTRL registers Initialization */
     PORTA.PIN0CTRL = 0x0;
     PORTA.PIN1CTRL = 0x0;
-    PORTA.PIN2CTRL = 0x0;
-    PORTA.PIN3CTRL = 0x0;
+    PORTA.PIN2CTRL = 0x8;
+    PORTA.PIN3CTRL = 0x8;
     PORTA.PIN4CTRL = 0x0;
     PORTA.PIN5CTRL = 0x0;
     PORTA.PIN6CTRL = 0x0;
@@ -82,8 +84,8 @@ void PIN_MANAGER_Initialize()
     PORTB.PIN7CTRL = 0x0;
     PORTC.PIN0CTRL = 0x0;
     PORTC.PIN1CTRL = 0x0;
-    PORTC.PIN2CTRL = 0x0;
-    PORTC.PIN3CTRL = 0x0;
+    PORTC.PIN2CTRL = 0x8;
+    PORTC.PIN3CTRL = 0x8;
     PORTC.PIN4CTRL = 0x0;
     PORTC.PIN5CTRL = 0x0;
     PORTC.PIN6CTRL = 0x0;
@@ -121,7 +123,7 @@ void PIN_MANAGER_Initialize()
     PORTMUX.TCAROUTEA = 0x0;
     PORTMUX.TCBROUTEA = 0x0;
     PORTMUX.TCDROUTEA = 0x0;
-    PORTMUX.TWIROUTEA = 0x2;
+    PORTMUX.TWIROUTEA = 0x0;
     PORTMUX.USARTROUTEA = 0x0;
     PORTMUX.USARTROUTEB = 0x0;
     PORTMUX.ZCDROUTEA = 0x0;
@@ -131,11 +133,13 @@ void PIN_MANAGER_Initialize()
     PC0_SetInterruptHandler(PC0_DefaultInterruptHandler);
     PA1_SetInterruptHandler(PA1_DefaultInterruptHandler);
     PA0_SetInterruptHandler(PA0_DefaultInterruptHandler);
-    PC3_SetInterruptHandler(PC3_DefaultInterruptHandler);
-    PC2_SetInterruptHandler(PC2_DefaultInterruptHandler);
     PC7_SetInterruptHandler(PC7_DefaultInterruptHandler);
     PD2_SetInterruptHandler(PD2_DefaultInterruptHandler);
     PD6_SetInterruptHandler(PD6_DefaultInterruptHandler);
+    PA2_SetInterruptHandler(PA2_DefaultInterruptHandler);
+    PA3_SetInterruptHandler(PA3_DefaultInterruptHandler);
+    PC2_SetInterruptHandler(PC2_DefaultInterruptHandler);
+    PC3_SetInterruptHandler(PC3_DefaultInterruptHandler);
     PC6_SetInterruptHandler(PC6_DefaultInterruptHandler);
 }
 
@@ -192,32 +196,6 @@ void PA0_DefaultInterruptHandler(void)
     // or set custom function using PA0_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for PC3 at application runtime
-*/
-void PC3_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    PC3_InterruptHandler = interruptHandler;
-}
-
-void PC3_DefaultInterruptHandler(void)
-{
-    // add your PC3 interrupt custom code
-    // or set custom function using PC3_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for PC2 at application runtime
-*/
-void PC2_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    PC2_InterruptHandler = interruptHandler;
-}
-
-void PC2_DefaultInterruptHandler(void)
-{
-    // add your PC2 interrupt custom code
-    // or set custom function using PC2_SetInterruptHandler()
-}
-/**
   Allows selecting an interrupt handler for PC7 at application runtime
 */
 void PC7_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -257,6 +235,58 @@ void PD6_DefaultInterruptHandler(void)
     // or set custom function using PD6_SetInterruptHandler()
 }
 /**
+  Allows selecting an interrupt handler for PA2 at application runtime
+*/
+void PA2_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    PA2_InterruptHandler = interruptHandler;
+}
+
+void PA2_DefaultInterruptHandler(void)
+{
+    // add your PA2 interrupt custom code
+    // or set custom function using PA2_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for PA3 at application runtime
+*/
+void PA3_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    PA3_InterruptHandler = interruptHandler;
+}
+
+void PA3_DefaultInterruptHandler(void)
+{
+    // add your PA3 interrupt custom code
+    // or set custom function using PA3_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for PC2 at application runtime
+*/
+void PC2_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    PC2_InterruptHandler = interruptHandler;
+}
+
+void PC2_DefaultInterruptHandler(void)
+{
+    // add your PC2 interrupt custom code
+    // or set custom function using PC2_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for PC3 at application runtime
+*/
+void PC3_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    PC3_InterruptHandler = interruptHandler;
+}
+
+void PC3_DefaultInterruptHandler(void)
+{
+    // add your PC3 interrupt custom code
+    // or set custom function using PC3_SetInterruptHandler()
+}
+/**
   Allows selecting an interrupt handler for PC6 at application runtime
 */
 void PC6_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -280,6 +310,14 @@ ISR(PORTA_PORT_vect)
     {
        PA0_InterruptHandler(); 
     }
+    if(VPORTA.INTFLAGS & PORT_INT2_bm)
+    {
+       PA2_InterruptHandler(); 
+    }
+    if(VPORTA.INTFLAGS & PORT_INT3_bm)
+    {
+       PA3_InterruptHandler(); 
+    }
     /* Clear interrupt flags */
     VPORTA.INTFLAGS = 0xff;
 }
@@ -301,17 +339,17 @@ ISR(PORTC_PORT_vect)
     {
        PC0_InterruptHandler(); 
     }
-    if(VPORTC.INTFLAGS & PORT_INT3_bm)
+    if(VPORTC.INTFLAGS & PORT_INT7_bm)
     {
-       PC3_InterruptHandler(); 
+       PC7_InterruptHandler(); 
     }
     if(VPORTC.INTFLAGS & PORT_INT2_bm)
     {
        PC2_InterruptHandler(); 
     }
-    if(VPORTC.INTFLAGS & PORT_INT7_bm)
+    if(VPORTC.INTFLAGS & PORT_INT3_bm)
     {
-       PC7_InterruptHandler(); 
+       PC3_InterruptHandler(); 
     }
     if(VPORTC.INTFLAGS & PORT_INT6_bm)
     {

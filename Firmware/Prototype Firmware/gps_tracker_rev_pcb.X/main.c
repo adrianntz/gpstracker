@@ -59,7 +59,7 @@
 
 #define OUTPUT_BUFFER_SIZE 100
 #define NMEA_NO_OF_FIELDS 12
-#define GPS_NUMBER_OF_TRANSMISSIONS 30
+#define GPS_NUMBER_OF_TRANSMISSIONS 10      
 //SYSTEM STATES DEFINITIONS 
 #define HIGH 1
 #define LOW 0
@@ -69,28 +69,29 @@
 
 //GLOBAL VARIABLES
 
-char                   USART_DummyBuffer, 
+char                     USART_DummyBuffer, 
                          GPS_USART0_Buffer[200],
                          Get_GPS_Cnt_String[5],
                          *GPRMC_Fields[12],
                          GPS_Validity[OUTPUT_BUFFER_SIZE];
- const char         Website_URL[]="http://gpstrackerntz.000webhostapp.com/gpsdata.php?";
+ const char              Website_URL[]="http://35.159.50.103/dashboard/gpsdata.php?";
 
 unsigned volatile int
-                         GPS_Buffer_Index = 0;
+                            GPS_Buffer_Index = 0;
 
-volatile bool           Delay_Flag = false, 
-                        GPS_Info_Flag = false, 
-                        Movement_Sensor_Status = false,
-                        VBUS_Flag=false,
-                        USART_Control_Print_once=false,
-                        VBUS_Change_Flag=true;
+    volatile bool           Delay_Flag = false, 
+                            GPS_Info_Flag = false, 
+                            Movement_Sensor_Status = false,
+                            VBUS_Flag=false,
+                            USART_Control_Print_once=false,
+                            VBUS_Change_Flag=true,
+                            GPS_SMS_SENT=false;
 
 bool                        do_once_flag = false,
                             charge_do_once=false;
-volatile uint8_t        Timer_Cnt= 0;
-uint8_t                    receiveData;
-uint8_t                    Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
+volatile uint8_t            Timer_Cnt= 0;
+uint8_t                     receiveData;
+uint8_t                     Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
 
  struct DecimalCoordinates
  {
@@ -295,7 +296,7 @@ void VBUS_Detect()
     VBUS_Flag=!VBUS_Flag;
     USART_Control_Print_once=false;
 }
-void GPS_ACQUIRE_TIMESTAMP()
+ void GPS_ACQUIRE_TIMESTAMP()
 {
     Delay_Flag=true;
 }
@@ -377,7 +378,7 @@ void send_lat_and_long_gprs(char lat_param[],
     USART0_Print("&lng="); USART0_Print(lng_param);
     USART0_Print("&lng_dir="); USART0_Print(lng_dir_param);
     USART0_Print("\"\r\n");
-    DELAY_milliseconds(300);
+    DELAY_milliseconds(600);
     USART0_Print("AT+HTTPACTION=1\r\n");
     DELAY_milliseconds(300);
     USART0_Print("AT+HTTPTERM\r\n");
@@ -396,6 +397,16 @@ void Sleep_Mode_Init()
             USART0_Print("AT+CGPSPWR=0\r\n");
             DELAY_milliseconds(300);
             USART0_Print("AT+CFUN=0\r\n");
+            DELAY_milliseconds(300);
+            USART0_Print("AT+CSCLK=1\r\n");
+            DELAY_milliseconds(300);
+            SET_DTR(HIGH);  
+         }
+         else
+         {
+            USART0_Print("AT+CGPSPWR=0\r\n");
+            DELAY_milliseconds(300);
+            USART0_Print("AT+CFUN=4\r\n");
             DELAY_milliseconds(300);
             USART0_Print("AT+CSCLK=1\r\n");
             DELAY_milliseconds(300);
@@ -472,7 +483,12 @@ char * NMEA_Parse(char *NMEA_Sentence,char *output)
     
     parse_comma_delimited_str(NMEA_Sentence,GPRMC_Fields,NMEA_NO_OF_FIELDS);
       if (strcmp(GPRMC_Fields[GPRMC_FIELD_VALIDITY], "A") == 0)
-        {
+        {   
+          if(GPS_SMS_SENT==false)
+          {
+              send_sms_message_AT("VALID GPS SIGNAL\n");
+              GPS_SMS_SENT=true;
+          }
             snprintf(output, OUTPUT_BUFFER_SIZE, "Valid\n");
             snprintf(DecimalDegrees_and_Minutes.Lat_DecMin, 10, GPRMC_Fields[GPRMC_FIELD_LAT]);
             snprintf(DecimalDegrees_and_Minutes.Lng_DecMin, 10, GPRMC_Fields[GPRMC_FIELD_LONG]);

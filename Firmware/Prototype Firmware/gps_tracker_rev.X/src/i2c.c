@@ -55,9 +55,12 @@ enum {
     I2C_ERROR
 };
 
-void I2C_0_Init(void) {
-  /* Select I2C pins PC2/PC3 */
-  PORTMUX.TWIROUTEA = 0x02;
+void I2C_0_Init(void) 
+{
+  PORTC.DIRSET = PIN2_bm|PIN3_bm;
+  PORTA.DIRSET = PIN2_bm|PIN3_bm;
+  /* Select I2C pins PA2/PA3 */
+  PORTMUX.TWIROUTEA = 0x00;
 
   /* Host Baud Rate Control */
   TWI0.MBAUD = TWI0_BAUD((I2C_SCL_FREQ), 0.3);

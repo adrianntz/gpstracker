@@ -2,7 +2,6 @@
 #include <avr/io.h>
 #include "../../gps_tracker_rev.X/headers/i2c.h"
 #include "../mcc_generated_files/timer/delay.h"
-#include "../mcc_generated_files/i2c_host/twi0.h"
 
 #define READ_BYTE 0x01
 #define BMI_ADDRESS 0x68
@@ -34,8 +33,8 @@ void I2C_0_EndSession(void) {
 
 void i2c_write(int device_address, uint8_t * reg_and_data, uint8_t size) 
 {
-  I2C_0_SendData((device_address << 1), reg_and_data, size);
-  //TWI0_Write((device_address << 1), reg_and_data, size);
+  //I2C_0_SendData((device_address << 1), reg_and_data, size);
+  TWI0_Write((device_address << 1), reg_and_data, size);
   I2C_0_EndSession();
 
 }
@@ -43,12 +42,14 @@ void i2c_write(int device_address, uint8_t * reg_and_data, uint8_t size)
 void i2c_read(int device_address, uint8_t * reciev_data, uint8_t size, uint8_t reg_read) 
 {
   i2c_write(device_address, & reg_read, 1);
-  TWI0_Read((device_address << 1) + 1, reciev_data, size);
+ // TWI0_Read((device_address << 1) + 1, reciev_data, size);
   I2C_0_EndSession();
 
 }
 
-void BMI_160_INIT(void) {
+void BMI_160_INIT(void) 
+{
+  I2C_0_Init();
   uint8_t REGISTER_AND_DATA[2];
 
   REGISTER_AND_DATA[0] = BMI160_REG_CMD;//0x7e

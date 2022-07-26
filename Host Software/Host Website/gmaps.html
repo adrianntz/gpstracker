@@ -77,12 +77,12 @@ var gps_path_coordinates=Array();
 var markers_deleted=0;
 var Is_Tracking_Checked=0;
 
-const  markers_limit_no=30;
+const  markers_limit_no=80;
 
 
 setInterval(function()
 {
-$.get( "http://localhost/gpsdata_fetch.php", function( data ) {
+$.get( "https://ec2-35-159-50-103.eu-central-1.compute.amazonaws.com/dashboard/gpsdata_fetch.php", function( data ) {
   gps_data=JSON.parse(data);
   last_location = new google.maps.LatLng(gps_data[gps_data.length-1].lat, gps_data[gps_data.length-1].lng); 
  // var str=JSON.stringify(gps_path_coordinates);
@@ -109,7 +109,8 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
         
     var Marker={
           coords:last_location,
-          content: ' <p> Time when tracked:'+ gps_data[gps_data.length-1].date + '</p> <p> Lat:'+ gps_data[gps_data.length-1].lat.toString() + ' </p> <p> Lng:'+ gps_data[gps_data.length-1].lng.toString() +' </p> '
+          content: ' <p> Time when tracked:'+ gps_data[gps_data.length-1].date + '</p> <p> Lat:'+ gps_data[gps_data.length-1].lat.toString() + ' </p> <p> Lng:'+ gps_data[gps_data.length-1].lng.toString() +' </p> ',
+		  iconImage: "https://img.icons8.com/fluency/48/228BE6/marker.png"
         }
         addMarker(Marker);
         markers.push(Marker);
@@ -120,7 +121,7 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
 
 });
 
-}, 100);
+}, 5000);
 
     function remove_oldest_marker(limit) 
     {
@@ -172,8 +173,8 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
         gps_path_coordinates.push(php_location);
         var Marker={
             coords:php_location,
-            content: ' <p> Time when tracked:'+ gps_data[gps_data.length-1].date + '</p> <p> Lat:'+ gps_data[gps_data.length-1].lat.toString() + ' </p> <p> Lng:'+ gps_data[gps_data.length-1].lng.toString() +' </p> '
-       
+            content: ' <p> Time when tracked:'+ gps_data[gps_data.length-1].date + '</p> <p> Lat:'+ gps_data[gps_data.length-1].lat.toString() + ' </p> <p> Lng:'+ gps_data[gps_data.length-1].lng.toString() +' </p> ',
+			iconImage: "https://img.icons8.com/fluency/48/228BE6/marker.png"
         }
         addMarker(Marker);
         markers.push(Marker);
@@ -196,7 +197,7 @@ $.get( "http://localhost/gpsdata_fetch.php", function( data ) {
           position:props.coords,
 		  animation: google.maps.Animation.DROP,
           map:map,
-          //icon:props.iconImage
+          icon:props.iconImage
         });
 		 markers.push(marker);
      if(Is_Tracking_Checked==1)

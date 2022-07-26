@@ -45,7 +45,6 @@ extern "C" {
 #include "config_bits.h"
 #include "../system/clock.h"
 #include "../system/pins.h"
-#include "../i2c_host/twi0.h"
 #include "../timer/rtc.h"
 #include "../uart/usart0.h"
 #include "../uart/usart1.h"

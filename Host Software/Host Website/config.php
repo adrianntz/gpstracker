@@ -1,7 +1,7 @@
 <?php 
-define('DB_HOST', 'localhost:3306'); 
+define('DB_HOST', 'localhost'); 
 define('DB_USERNAME', 'root'); 
-define('DB_PASSWORD', '123456'); 
+define('DB_PASSWORD', ''); 
 define('DB_NAME', 'gps_coordinates');
 
 date_default_timezone_set('Europe/Bucharest');

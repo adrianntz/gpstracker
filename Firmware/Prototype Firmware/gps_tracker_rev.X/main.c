@@ -229,6 +229,7 @@ void send_lat_and_long_gprs(char lat_param[],
 
 int main(void)
 {
+    
     SYSTEM_Initialize();
     BMI_160_INIT();
     RTC_SetOVFIsrCallback(GPS_ACQUIRE_TIMESTAMP);
@@ -236,9 +237,9 @@ int main(void)
     PC7_SetInterruptHandler(VBUS_Detect);
     USART0_RxCompleteCallbackRegister(SIM808_RECIEVE);
     USART1_RxCompleteCallbackRegister(CDC_TX);
-    TWI0_Deinitialize();
-    uint8_t STATE = SLEEP;
     
+    uint8_t STATE = SLEEP;
+  
     printf("[CONSOLE] Module Initialized\r\n");
     
                               
