@@ -59,7 +59,7 @@
 
 #define OUTPUT_BUFFER_SIZE 100
 #define NMEA_NO_OF_FIELDS 12
-#define GPS_NUMBER_OF_TRANSMISSIONS 10      
+#define GPS_NUMBER_OF_TRANSMISSIONS 15     
 //SYSTEM STATES DEFINITIONS 
 #define HIGH 1
 #define LOW 0
@@ -71,25 +71,35 @@
 
 char                     USART_DummyBuffer, 
                          GPS_USART0_Buffer[200],
+                         GPS_USART0_Buffer_Bat_Lvl[50],
                          Get_GPS_Cnt_String[5],
-                         *GPRMC_Fields[12],
-                         GPS_Validity[OUTPUT_BUFFER_SIZE];
+                         *GPRMC_Fields[NMEA_NO_OF_FIELDS],
+                         *Bat_Check_Fields[3],
+                         GPS_Validity[OUTPUT_BUFFER_SIZE],
+                         BAT_LVL_STR[3];
  const char              Website_URL[]="http://35.159.50.103/dashboard/gpsdata.php?";
 
 unsigned volatile int
-                            GPS_Buffer_Index = 0;
+                            GPS_Buffer_Index = 0,
+                            GPS_Buffer_Bat_Index=0;
 
-    volatile bool           Delay_Flag = false, 
+volatile bool               Delay_Flag = false, 
                             GPS_Info_Flag = false, 
                             Movement_Sensor_Status = false,
                             VBUS_Flag=false,
                             USART_Control_Print_once=false,
                             VBUS_Change_Flag=true,
-                            GPS_SMS_SENT=false;
+                            GPS_SMS_SENT=false,
+                            PWR_UP_FLG=false,
+                            BAT_LVL_Check_Flag=false,
+                            BAT_LVL_Check_Flag_Is_Done=false;
 
 bool                        do_once_flag = false,
                             charge_do_once=false;
-volatile uint8_t            Timer_Cnt= 0;
+volatile uint8_t            Timer_Cnt= 0,
+                            Bat_Lvl_Prct=0;
+
+
 uint8_t                     receiveData;
 uint8_t                     Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
 
@@ -103,6 +113,7 @@ uint8_t                     Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;
 
 volatile struct DecimalCoordinates Coordinates;
 
+void SIM808_POWER_ONOFF();
 void Led_Blink();
 void SET_DTR(bool setting);
 void SET_PWKEY(bool setting);
@@ -119,10 +130,12 @@ int parse_comma_delimited_str(char* string, char** fields, int max_fields);
 void send_sms_message_AT(char * msg) ;
 void Sleep_Mode_Init();
 void GPS_Coordonates_Send();
+char *Battery_Check(char* string, char** fields);
 void send_lat_and_long_gprs(char lat_param[],
                             char lat_dir_param[], 
                             char lng_param[],
-                            char lng_dir_param[]);
+                            char lng_dir_param[],
+                            char bat_lvl[]);
 
 int main(void)
 {
@@ -137,12 +150,9 @@ int main(void)
     I2C_0_Disable();
     SET_RST(true);
     SET_DTR(false);
-    SET_PWKEY(true);
     TCA0.SINGLE.CTRLA &= ~0x1; //shut off TCA0
     
-    
-    
-    uint8_t STATE = SLEEP;
+    uint8_t STATE = GET_GPS;
     
     printf("[CONSOLE] Module Initialized\r\n");
     
@@ -245,6 +255,13 @@ void SET_RST(bool setting) //Function to set RST pin HIGH or LOW
     PORTD.OUTCLR=PIN3_bm; //SET RST LOW
 }
 
+void SIM808_POWER_ONOFF()
+{
+    SET_PWKEY(HIGH);
+    DELAY_milliseconds(1500);
+    SET_PWKEY(LOW);
+}
+    
 
 
 void USART0_Print(const char* string)
@@ -264,21 +281,37 @@ void USART0_Print(const char* string)
 void SIM808_RECIEVE()
 {
     char rxdata=USART0.RXDATAL;
+    
     if(rxdata=='$')
-                GPS_Info_Flag = true;   
+        GPS_Info_Flag = true; 
+    
+    if(rxdata==':')
+        BAT_LVL_Check_Flag=true;
+    
     //We signal in the Recieve Interrupt Vector to store the data 
-    if (GPS_Info_Flag == true)                               // GPS_Info_Flag atentioneaza sa se stocheze datele in buffer
-     {
+    if (GPS_Info_Flag == true)                               // GPS_Info_Flag warns to store GPS data in the USART buffer
+    {
          GPS_USART0_Buffer[GPS_Buffer_Index++] = rxdata; 
-                                                                //buffer pt coordonate GPS
+                                                                
         if (rxdata == '*') //We stop storing the GPS data at the checksum 
         {
           GPS_Info_Flag = false;
           GPS_Buffer_Index = 0;
         }
-    } 
-    else
-        USART_DummyBuffer = rxdata;       //The RXC interrupt flag is cleard only when RXDATAL is read.
+    }
+    
+    if(BAT_LVL_Check_Flag==true)
+        {
+            GPS_USART0_Buffer_Bat_Lvl[GPS_Buffer_Bat_Index++] = rxdata;
+            if(rxdata=='K')
+            {
+                BAT_LVL_Check_Flag=false;
+                GPS_Buffer_Bat_Index=0;
+                BAT_LVL_Check_Flag_Is_Done=true;
+            }
+        }
+        
+    USART_DummyBuffer = rxdata;       //The RXC interrupt flag is cleard only when RXDATAL is read.
      
     USART1_Write(rxdata);
     
@@ -355,7 +388,8 @@ void send_sms_message_AT(char * msg)
 void send_lat_and_long_gprs(char lat_param[],
                             char lat_dir_param[], 
                             char lng_param[],
-                            char lng_dir_param[])
+                            char lng_dir_param[],
+                            char bat_lvl[])
 {
     USART0_Print("AT+CGATT=1\r\n");                                                     
     DELAY_milliseconds(300);
@@ -377,6 +411,7 @@ void send_lat_and_long_gprs(char lat_param[],
     USART0_Print("&lat_dir="); USART0_Print(lat_dir_param);
     USART0_Print("&lng="); USART0_Print(lng_param);
     USART0_Print("&lng_dir="); USART0_Print(lng_dir_param);
+    USART0_Print("&bat="); USART0_Print(bat_lvl);
     USART0_Print("\"\r\n");
     DELAY_milliseconds(600);
     USART0_Print("AT+HTTPACTION=1\r\n");
@@ -391,16 +426,18 @@ void Sleep_Mode_Init()
 {
      if (do_once_flag == false)                 //These commands need to be sent only once
       {
-        
+         PWR_UP_FLG=false;
          if(VBUS_Flag==false)
          {
-            USART0_Print("AT+CGPSPWR=0\r\n");
-            DELAY_milliseconds(300);
-            USART0_Print("AT+CFUN=0\r\n");
-            DELAY_milliseconds(300);
-            USART0_Print("AT+CSCLK=1\r\n");
-            DELAY_milliseconds(300);
-            SET_DTR(HIGH);  
+            //USART0_Print("AT+CGPSPWR=0\r\n");
+            //DELAY_milliseconds(300);
+            //USART0_Print("AT+CFUN=0\r\n");
+            // DELAY_milliseconds(300);
+            //USART0_Print("AT+CSCLK=1\r\n");
+            //DELAY_milliseconds(300);
+            SET_DTR(HIGH);
+            USART0_Print("AT+CPOWD=1\r\n");
+            SIM808_POWER_ONOFF();
          }
          else
          {
@@ -415,30 +452,46 @@ void Sleep_Mode_Init()
              
         do_once_flag = true;
         GPS_USART0_Buffer[0]=0;         //clear buffer
+        GPS_USART0_Buffer_Bat_Lvl[0]=0;
         set_sleep_mode(SLEEP_MODE_PWR_DOWN);
         sleep_mode();
       }
       
 }
 
+
+
 /* Function used to send GPS Coordonates read by the SIM808 Module */
 void GPS_Coordonates_Send()
 {
-    if (Delay_Flag == true)                     //Delay_Flag is toggled once every 30s
+    if (Delay_Flag == true)                     //Delay_Flag is toggled once every 15s
       {
         Delay_Flag = false;
         SET_DTR(LOW);
-        
+        if(PWR_UP_FLG==false && VBUS_Flag==false)
+        {
+            SIM808_POWER_ONOFF();
+            PWR_UP_FLG=true;
+        }
         USART0_Print("AT+CFUN=1\r\n");        //Enables Full GSM Functionality
         DELAY_milliseconds(3000);
+        USART0_Print("AT+CBC\r\n");
+        DELAY_milliseconds(100);
+        if(BAT_LVL_Check_Flag_Is_Done==true)
+        {
+            BAT_LVL_Check_Flag_Is_Done=false;
+            parse_comma_delimited_str(GPS_USART0_Buffer_Bat_Lvl,Bat_Check_Fields,3);
+        }
+        DELAY_milliseconds(100);
         USART0_Print("AT+CGPSPWR=1\r\n"); //Turn on GPS power
         DELAY_milliseconds(300);
-        USART0_Print("AT+CGPSOUT=32\r\n"); // CGPSOUT=2 enables the SIM808 to send GPS data in GPGGA format once every second
+        USART0_Print("AT+CGPSOUT=32\r\n"); // CGPSOUT=32 enables the SIM808 to send GPS data in GPRMC  format once every second
         
         DELAY_milliseconds(900);         //We use a 2s delay to recieve at least one full string of data to parse
                                                             
         
         USART0_Print("AT+CGPSOUT=0\r\n");
+        
         //parse_comma_delimited_str(GPS_USART1_Buffer,GPRMC_Fields,NMEA_NO_OF_FIELDS);
        // send_sms_message_AT(SMS_STRING);
         DELAY_milliseconds(100);
@@ -450,14 +503,15 @@ void GPS_Coordonates_Send()
             send_lat_and_long_gprs(DecimalDegrees_and_Minutes.Lat_DecMin,
                                    DecimalDegrees_and_Minutes.Lat_Dir_DecMin,
                                    DecimalDegrees_and_Minutes.Lng_DecMin,
-                                   DecimalDegrees_and_Minutes.Lng_Dir_DecMin);
+                                   DecimalDegrees_and_Minutes.Lng_Dir_DecMin,
+                                   Bat_Check_Fields[1]);
         }
         /* For Debugging reasons, we print out the GPS counter*/
         if(VBUS_Flag==true)
         {
-            printf("[CONSOLE] GPS COUNT: %d\n\r",--Get_GPS_Cnt);
-            
+            printf("[CONSOLE] GPS COUNT: %d\n\r",Get_GPS_Cnt);
         }
+        Get_GPS_Cnt--;
     }
     
 }

@@ -23,6 +23,7 @@ $lat = $_GET['lat'];
 $lat_dir = $_GET['lat_dir'];
 $lng = $_GET['lng'];
 $lng_dir = $_GET['lng_dir'];
+$bat_lvl=$_GET['bat'];
 
 $lat=ConvDecimalMinutestoDecimalDdegrees_lat($lat);
 if($lat_dir == 'S')
@@ -37,8 +38,8 @@ echo "<br>";
 echo $lng;
 
 
-$sql = "INSERT INTO tbl_gps(lat,lng,date) 
-	VALUES('".$lat."','".$lng."','".date("Y-m-d H:i:s")."')";
+$sql = "INSERT INTO tbl_gps(lat,lng,date,bat_lvl) 
+	VALUES('".$lat."','".$lng."','".date("Y-m-d H:i:s")."','".$bat_lvl."')";
 
 if($db->query($sql) === FALSE)
 	{ echo "Error: " . $sql . "<br>" . $db->error; }
