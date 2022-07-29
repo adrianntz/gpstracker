@@ -59,7 +59,7 @@
 
 #define OUTPUT_BUFFER_SIZE 100
 #define NMEA_NO_OF_FIELDS 12
-#define GPS_NUMBER_OF_TRANSMISSIONS 15     
+#define GPS_NUMBER_OF_TRANSMISSIONS 20   
 //SYSTEM STATES DEFINITIONS 
 #define HIGH 1
 #define LOW 0
@@ -91,6 +91,7 @@ volatile bool               Delay_Flag = false,
                             VBUS_Change_Flag=true,
                             GPS_SMS_SENT=false,
                             PWR_UP_FLG=false,
+                            BAT_LVL_Begin_Flg=false,
                             BAT_LVL_Check_Flag=false,
                             BAT_LVL_Check_Flag_Is_Done=false;
 
@@ -150,6 +151,7 @@ int main(void)
     I2C_0_Disable();
     SET_RST(true);
     SET_DTR(false);
+    SIM808_POWER_ONOFF();
     TCA0.SINGLE.CTRLA &= ~0x1; //shut off TCA0
     
     uint8_t STATE = GET_GPS;
@@ -216,7 +218,6 @@ int main(void)
         {
           Get_GPS_Cnt = GPS_NUMBER_OF_TRANSMISSIONS;                         //Reset the GPS counter
           STATE=SLEEP;
-          
           do_once_flag = false;                                              //The Sleep Commands must be used now
         }
        
@@ -285,7 +286,7 @@ void SIM808_RECIEVE()
     if(rxdata=='$')
         GPS_Info_Flag = true; 
     
-    if(rxdata==':')
+    if(rxdata==':' && BAT_LVL_Begin_Flg==true)
         BAT_LVL_Check_Flag=true;
     
     //We signal in the Recieve Interrupt Vector to store the data 
@@ -300,7 +301,7 @@ void SIM808_RECIEVE()
         }
     }
     
-    if(BAT_LVL_Check_Flag==true)
+    if(BAT_LVL_Check_Flag==true && BAT_LVL_Begin_Flg==true)
         {
             GPS_USART0_Buffer_Bat_Lvl[GPS_Buffer_Bat_Index++] = rxdata;
             if(rxdata=='K')
@@ -429,32 +430,37 @@ void Sleep_Mode_Init()
          PWR_UP_FLG=false;
          if(VBUS_Flag==false)
          {
-            //USART0_Print("AT+CGPSPWR=0\r\n");
-            //DELAY_milliseconds(300);
-            //USART0_Print("AT+CFUN=0\r\n");
-            // DELAY_milliseconds(300);
-            //USART0_Print("AT+CSCLK=1\r\n");
-            //DELAY_milliseconds(300);
+            USART0_Print("AT+CNETLIGHT=0\r\n");
+            DELAY_milliseconds(100);
+            USART0_Print("AT+CGPSPWR=0\r\n");
+            DELAY_milliseconds(100);
+            USART0_Print("AT+CFUN=0\r\n");
+            DELAY_milliseconds(100);
+            USART0_Print("AT+CSCLK=1\r\n");
+            DELAY_milliseconds(100);
             SET_DTR(HIGH);
             USART0_Print("AT+CPOWD=1\r\n");
             SIM808_POWER_ONOFF();
+            set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+            sleep_mode();
          }
          else
          {
+            USART0_Print("AT+CNETLIGHT=0\r\n");
+            DELAY_milliseconds(100); 
             USART0_Print("AT+CGPSPWR=0\r\n");
-            DELAY_milliseconds(300);
+            DELAY_milliseconds(100);
             USART0_Print("AT+CFUN=4\r\n");
-            DELAY_milliseconds(300);
+            DELAY_milliseconds(100);
             USART0_Print("AT+CSCLK=1\r\n");
-            DELAY_milliseconds(300);
+            DELAY_milliseconds(100);
             SET_DTR(HIGH);  
          }
              
         do_once_flag = true;
         GPS_USART0_Buffer[0]=0;         //clear buffer
         GPS_USART0_Buffer_Bat_Lvl[0]=0;
-        set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-        sleep_mode();
+        
       }
       
 }
@@ -466,22 +472,27 @@ void GPS_Coordonates_Send()
 {
     if (Delay_Flag == true)                     //Delay_Flag is toggled once every 15s
       {
+        USART0_Print("AT+CNETLIGHT=1\r\n");
+        DELAY_milliseconds(50);
         Delay_Flag = false;
         SET_DTR(LOW);
+        
         if(PWR_UP_FLG==false && VBUS_Flag==false)
         {
             SIM808_POWER_ONOFF();
             PWR_UP_FLG=true;
-        }
+        } 
+         
         USART0_Print("AT+CFUN=1\r\n");        //Enables Full GSM Functionality
-        DELAY_milliseconds(3000);
+        DELAY_milliseconds(500);
+        
+        BAT_LVL_Begin_Flg=true;
         USART0_Print("AT+CBC\r\n");
         DELAY_milliseconds(100);
         if(BAT_LVL_Check_Flag_Is_Done==true)
-        {
-            BAT_LVL_Check_Flag_Is_Done=false;
-            parse_comma_delimited_str(GPS_USART0_Buffer_Bat_Lvl,Bat_Check_Fields,3);
-        }
+          parse_comma_delimited_str(GPS_USART0_Buffer_Bat_Lvl,Bat_Check_Fields,3);
+        BAT_LVL_Begin_Flg=false;
+        
         DELAY_milliseconds(100);
         USART0_Print("AT+CGPSPWR=1\r\n"); //Turn on GPS power
         DELAY_milliseconds(300);
@@ -506,12 +517,12 @@ void GPS_Coordonates_Send()
                                    DecimalDegrees_and_Minutes.Lng_Dir_DecMin,
                                    Bat_Check_Fields[1]);
         }
+        DELAY_milliseconds(500);
         /* For Debugging reasons, we print out the GPS counter*/
         if(VBUS_Flag==true)
-        {
-            printf("[CONSOLE] GPS COUNT: %d\n\r",Get_GPS_Cnt);
-        }
-        Get_GPS_Cnt--;
+            printf("[CONSOLE] GPS COUNT: %d\n\r",--Get_GPS_Cnt);
+        else
+            Get_GPS_Cnt--;
     }
     
 }

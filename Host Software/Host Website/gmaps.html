@@ -123,8 +123,11 @@ $.get( "https://ec2-35-159-50-103.eu-central-1.compute.amazonaws.com/dashboard/g
         
     var Marker={
           coords:last_location,
-          content: ' <p> Time when tracked:'+ gps_data[gps_data.length-1].date + '</p> <p> Lat:'+ gps_data[gps_data.length-1].lat.toString() + ' </p> <p> Lng:'+ gps_data[gps_data.length-1].lng.toString() +' </p> ',
-		  iconImage: "https://img.icons8.com/offices/30/228BE6/marker.png"
+          content: ' <p> Time when tracked:'+ gps_data[gps_data.length-1].date + 
+                    '</p> <p> Lat:'+ gps_data[gps_data.length-1].lat.toString() + 
+                    ' </p> <p> Lng:'+ gps_data[gps_data.length-1].lng.toString() +
+                    ' </p> <p> Battery:'+ gps_data[gps_data.length-1].bat_lvl.toString() + '% </p>',
+		      iconImage: "https://img.icons8.com/offices/30/228BE6/marker.png"
         }
         addMarker(Marker);
         markers.push(Marker);
@@ -187,8 +190,11 @@ $.get( "https://ec2-35-159-50-103.eu-central-1.compute.amazonaws.com/dashboard/g
         gps_path_coordinates.push(php_location);
         var Marker={
             coords:php_location,
-            content: ' <p> Time when tracked:'+ gps_data[gps_data.length-1].date + '</p> <p> Lat:'+ gps_data[gps_data.length-1].lat.toString() + ' </p> <p> Lng:'+ gps_data[gps_data.length-1].lng.toString() +' </p> ',
-			iconImage: "https://img.icons8.com/offices/30/228BE6/marker.png"
+            content: ' <p> Time when tracked:'+ gps_data[i].date + 
+                    '</p> <p> Lat:'+ gps_data[i].lat.toString() + 
+                    ' </p> <p> Lng:'+ gps_data[i].lng.toString() +
+                    ' </p> <p> Battery:'+ gps_data[i].bat_lvl.toString() + '% </p>',
+            iconImage: "https://img.icons8.com/offices/30/228BE6/marker.png"
         }
         addMarker(Marker);
         markers.push(Marker);
