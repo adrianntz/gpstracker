@@ -155,6 +155,7 @@ int main(void)
     TCA0.SINGLE.CTRLA &= ~0x1; //shut off TCA0
     
     uint8_t STATE = GET_GPS;
+    PWR_UP_FLG=true;
     
     printf("[CONSOLE] Module Initialized\r\n");
     
@@ -439,7 +440,7 @@ void Sleep_Mode_Init()
             USART0_Print("AT+CSCLK=1\r\n");
             DELAY_milliseconds(100);
             SET_DTR(HIGH);
-            USART0_Print("AT+CPOWD=1\r\n");
+            //USART0_Print("AT+CPOWD=1\r\n");
             SIM808_POWER_ONOFF();
             set_sleep_mode(SLEEP_MODE_PWR_DOWN);
             sleep_mode();
