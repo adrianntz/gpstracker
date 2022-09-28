@@ -1,0 +1,113 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\m68150\OneDrive - Microchip Technology Inc\Desktop\MCU8NPIAPPS Repo's\GPS Tracker Internship\Hardware\Design\GPS_TRACKER.PcbDoc
+Date     : 7/4/2022
+Time     : 3:41:33 PM
+
+Processing Rule : Clearance Constraint (Gap=0.25mm) (InNamedPolygon('GND_L02_P003')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.25mm) (InNamedPolygon('GND_L01_P012')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.25mm) (InNet('your net here')),((IsRegion))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.25mm) ((IsRegion)),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (IsNet),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=1mm) (Preferred=0.5mm) (InNet('GND'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=1.5mm) (Max=1.5mm) (Preferred=1.5mm) (Disabled)(InNetClass('RF'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.2mm) (Max=7mm) (Preferred=0.3mm) (All)
+Rule Violations :0
+
+Processing Rule : SMD To Corner (Distance=0.1mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.5mm) (Conductor Width=0.3mm) (Air Gap=0.3mm) (Entries=4) (IsVia)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.3mm) (Conductor Width=0.3mm) (Air Gap=0.25mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.15mm) (All)
+Rule Violations :0
+
+Processing Rule : Acute Angle Constraint [Tracks Only] (Minimum=89.000) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.25mm) (Max=6mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.3mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.13mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.15mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (OnLayer('Top Overlay','Bottom Overlay'))
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mm, Vertical Gap = 0mm ) (HasFootprint('NET_TIE_0.5mm')),(All) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.2mm, Vertical Gap = 0.2mm ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Waived Violations Of Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Pad GPS_ANT->-1(3.895mm,2.35mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Pad GPS_ANT->-1(3.895mm,2.35mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Pad GPS_ANT->-2(1.955mm,6.25mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Pad GPS_ANT->-2(1.955mm,6.25mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Pad GPS_ANT->-3(3.895mm,6.25mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Pad GPS_ANT->-3(3.895mm,6.25mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Pad GPS_ANT->-4(1.955mm,2.35mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Pad GPS_ANT->-4(1.955mm,2.35mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Track (3.895mm,2.35mm)(14.875mm,2.35mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+   Waived Violation between Clearance Constraint: (Collision < 0.2mm) Between Area Fill (0.386mm,0.55mm) (5.666mm,8.02mm) on Keep-Out Layer And Track (3.895mm,2.35mm)(14.875mm,2.35mm) on Top Layer Waived by Adrian Neata at 6/29/2022 11:08:10 AMKeep Out Issue on footprint of antenna
+Waived Violations :10
+
+Waived Violations Of Rule : Net Antennae (Tolerance=0mm) (All)
+   Waived Violation between Net Antennae: Track (28.966mm,-30.396mm)(28.966mm,-25.775mm) on Top Layer Waived by Adrian Neata at 7/4/2022 3:39:11 PMAntenna Do Not Modify
+Waived Violations :1
+
+Waived Violations Of Rule : Board Clearance Constraint (Gap=0mm) (OnLayer('Top Overlay','Bottom Overlay'))
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (10.855mm,65.463mm)(10.855mm,66.275mm) on Top Overlay Waived by Adrian Neata at 6/22/2022 3:37:48 PMError caused by placement of USB board near edge of PCB
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (10.855mm,66.275mm)(18.345mm,66.275mm) on Top Overlay Waived by Adrian Neata at 6/22/2022 3:37:48 PMError caused by placement of USB board near edge of PCB
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (18.345mm,65.463mm)(18.345mm,66.275mm) on Top Overlay Waived by Adrian Neata at 6/22/2022 3:37:48 PMError caused by placement of USB board near edge of PCB
+Waived Violations :3
+
+
+Violations Detected : 0
+Waived Violations : 14
+Time Elapsed        : 00:00:02
