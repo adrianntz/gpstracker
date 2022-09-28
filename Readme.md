@@ -3,22 +3,25 @@
 
 # Power Efficient GPS Tracker
 
-![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Microchip_logo.svg/2560px-Microchip_logo.svg.png)
 
 This is an internship project aiming to build a portable GPS Tracker which sends out its GPS coordinates whenever it detects motion either through SMS or to a website application through power efficient means.
 ## Changelog
--  `1.0`  : Initial release
-- ` 1.1` : Added communication with a hosted website application which uses GMaps API.
-- `1.2` :   Added hardware PCB design.
+- `1.0`  : Initial release with prototype Hardware and GSM communication through SMS.
+- ` 1.1` : Added GPRS communication with a hosted website application.
+- `1.2` :   Added hardware PCB design with integrated RF section.
 
 ## Features
 
-- Portable and lightweight hardware design
+- Robust and RF emission free PCB design.
 - Long-lasting battery life with easy  micro-USB Charging.
-- USART echo through USB serial interface.
+- USART echo through USB serial interface for easy debugging.
 - User-Friendly web-hosted application with Google Maps integration🌍
 
-
+## Technologie used
+- Firmware written on Microchip 8-bit microcontroller AVR128DA48, having good performance and a lot of peripherics for low power usage.
+- High frequency RF coplanar wave transmission line with reduced PCB trace width and RF emissions.
+- Web Application Front-End built using JavaScript, HTML and CSS and Google Maps API.
+- Web App Back-end built with PHP for data access and storing layer.
 
 ## Hardware Modules Used
 
